@@ -1,0 +1,742 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Educação de Valença · Proposta ao Prefeito</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700;800&family=Source+Serif+4:opsz,wght@8..60,500;8..60,600;8..60,700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy1:#0a1d38; --navy2:#11315c; --on:#eef3fb; --on-muted:#a8bbd8; --on-line:rgba(255,255,255,.16);
+  --card:#ffffff; --ink:#18233a; --muted:#5b667a; --line:#dfe5ee; --soft:#f2f5f9;
+  --ouro:#e0b43f; --ouro-ink:#8a6410; --verde:#1f7a4d; --verde-soft:#e3f2ea; --verm:#b23d2f; --verm-soft:#f8e5e2;
+  --azul:#0d4677; --azul-soft:#e3ecf6; --gab:#a87410; --gab-soft:#f7eed8;
+  --ob:#0d4677; --op:#1f7a4d; --ol:#c7cbd3;
+  --serif:"Source Serif 4", Georgia, "Times New Roman", serif;
+  --sans:"Public Sans", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  color-scheme: light;
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);
+  padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --navy1:#071528; --navy2:#0c2546; --card:#152238; --ink:#e6ecf5; --muted:#9eabc0; --line:#283752; --soft:#1b2a43;
+    --verde:#5cc28d; --verde-soft:#163325; --verm:#ec8a7c; --verm-soft:#3b1e1a; --azul:#8db4e6; --azul-soft:#1a2c47;
+    --gab:#e0b43f; --gab-soft:#33290f; --ouro-ink:#e0b43f; --ol:#3a4a66;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"]{
+  --navy1:#071528; --navy2:#0c2546; --card:#152238; --ink:#e6ecf5; --muted:#9eabc0; --line:#283752; --soft:#1b2a43;
+  --verde:#5cc28d; --verde-soft:#163325; --verm:#ec8a7c; --verm-soft:#3b1e1a; --azul:#8db4e6; --azul-soft:#1a2c47;
+  --gab:#e0b43f; --gab-soft:#33290f; --ouro-ink:#e0b43f; --ol:#3a4a66;
+  color-scheme: dark;
+}
+html{scroll-padding-top:calc(env(safe-area-inset-top,0px) + 58px);scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+*,*::before,*::after{box-sizing:inherit}
+html{background:var(--navy1)}
+body{margin:0;background:linear-gradient(180deg,var(--navy1) 0,var(--navy2) 40%,var(--navy1) 100%);color:var(--on);font:16px/1.55 var(--sans);-webkit-text-size-adjust:100%}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--navy1)}
+h1,h2,h3{font-family:var(--serif);font-weight:600;line-height:1.18;margin:0}
+p{margin:.55rem 0}
+.num{font-variant-numeric:tabular-nums}
+:focus-visible{outline:3px solid var(--ouro);outline-offset:2px;border-radius:4px}
+a{color:inherit}
+
+/* barra superior */
+.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:9;background:rgba(10,29,56,.94);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border-bottom:1px solid var(--on-line)}
+.top .in{max-width:1120px;margin:0 auto;display:flex;align-items:center;gap:6px;padding:0 14px;overflow-x:auto;scrollbar-width:none}
+.top .in::-webkit-scrollbar{display:none}
+.top .brand{flex:0 0 auto;font-family:var(--serif);font-weight:700;color:var(--ouro);padding:14px 10px 14px 0;margin-right:6px;border-right:1px solid var(--on-line);text-decoration:none}
+.top nav a{flex:0 0 auto;display:inline-block;padding:15px 10px 13px;color:var(--on-muted);font-weight:600;font-size:.9rem;text-decoration:none;border-bottom:3px solid transparent;white-space:nowrap}
+.top nav a.on{color:#fff;border-bottom-color:var(--ouro)}
+.top nav{display:flex}
+
+.wrap{max-width:1120px;margin:0 auto;padding:0 18px}
+section.blk{padding:56px 0 20px}
+.eyebrow{color:var(--ouro);font-weight:700;font-size:.92rem;margin-bottom:8px}
+h2.big{font-size:clamp(1.8rem,5vw,2.6rem);max-width:22ch}
+.intro{color:var(--on-muted);font-size:1.06rem;max-width:64ch}
+
+/* capa */
+.hero{padding:56px 0 30px;position:relative;overflow:hidden}
+.hero::after{content:"";position:absolute;right:-120px;top:-80px;width:420px;height:420px;border-radius:50%;border:60px solid rgba(224,180,63,.07);pointer-events:none}
+.hero .who{color:var(--on-muted);font-size:.95rem}
+.hero h1{font-size:clamp(2.15rem,6.4vw,3.9rem);max-width:19ch;margin:14px 0 0;letter-spacing:-.01em}
+.hero .rule{width:72px;height:4px;background:var(--ouro);border-radius:2px;margin:22px 0 18px}
+.hero p.sub{color:var(--on-muted);font-size:1.12rem;max-width:58ch}
+.goals{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:14px;margin-top:30px}
+.goal{display:block;text-decoration:none;color:var(--on);background:rgba(255,255,255,.06);border:1px solid var(--on-line);border-radius:18px;padding:20px 20px 18px;position:relative}
+.goal .gi{width:48px;height:48px;border-radius:14px;display:grid;place-items:center;margin-bottom:14px}
+.goal h3{font-size:1.32rem}
+.goal p{color:var(--on-muted);font-size:.95rem;margin:.4rem 0 .6rem}
+.goal .go{color:var(--ouro);font-weight:700;font-size:.9rem}
+.g-ouro .gi{background:rgba(224,180,63,.16);color:var(--ouro)}
+.g-verde .gi{background:rgba(92,194,141,.16);color:#7fd3a6}
+.g-verm .gi{background:rgba(236,138,124,.16);color:#f0a294}
+.means{margin-top:22px;display:flex;gap:14px;align-items:center;background:rgba(224,180,63,.10);border:1px solid rgba(224,180,63,.35);border-radius:16px;padding:16px 18px}
+.means p{margin:0;font-size:1rem}
+@media (max-width:560px){.means{flex-direction:column;align-items:flex-start}}
+.means a{color:var(--ouro);font-weight:700;white-space:nowrap}
+
+/* folhas brancas */
+.sheet{background:var(--card);color:var(--ink);border-radius:22px;padding:28px 24px;margin-top:24px;box-shadow:0 18px 40px rgba(0,0,0,.25)}
+.sheet h3{font-size:1.25rem;margin-bottom:.4rem}
+.sheet .mut{color:var(--muted)}
+.cols{display:grid;grid-template-columns:1.1fr .9fr;gap:26px;align-items:start}
+@media (max-width:820px){.cols{grid-template-columns:1fr}}
+.sheet ul.dots{padding-left:1.15rem;margin:.4rem 0}
+.sheet ul.dots li{margin:.35rem 0}
+.callout{background:var(--soft);border-left:4px solid var(--ouro);border-radius:10px;padding:12px 14px;margin:14px 0;font-size:.96rem}
+.src{color:var(--muted);font-size:.8rem;margin-top:12px}
+
+/* selo */
+.medals{display:flex;gap:18px;align-items:center;justify-content:center;margin:6px 0 10px}
+.medal{text-align:center}
+.medal .m{width:96px;height:96px;border-radius:50%;display:grid;place-items:center;font-family:var(--serif);font-weight:700;font-size:1.05rem;margin:0 auto 8px}
+.m-prata{background:radial-gradient(circle at 35% 30%,#ffffff,#c9ced6 55%,#8f97a3);color:#38404c;border:4px solid #b5bcc6}
+.m-ouro{background:radial-gradient(circle at 35% 30%,#fff4cf,#e7bf4f 55%,#a57a16);color:#4d3806;border:4px solid #d4a537}
+.medal small{color:var(--muted);font-size:.85rem}
+.arrow{font-size:1.6rem;color:var(--muted)}
+.gap10{background:var(--soft);border-radius:14px;padding:14px;margin-top:12px}
+.gap10 .bar{height:16px;border-radius:8px;background:var(--line);overflow:hidden;display:flex;margin:8px 0 6px}
+.gap10 .bar i{display:block;height:100%}
+.gap10 .lg{display:flex;justify-content:space-between;font-size:.82rem;color:var(--muted)}
+
+/* ideb */
+.idebgrid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media (max-width:560px){.idebgrid{grid-template-columns:1fr}}
+.ib{border:1px solid var(--line);border-radius:14px;padding:16px}
+.ib h4{margin:0 0 4px;font-size:1rem}
+.ib .big{font-family:var(--serif);font-size:2.4rem;font-weight:700;line-height:1.05;color:var(--verde)}
+.ib .from{color:var(--muted);font-size:.9rem}
+.ibar{display:grid;grid-template-columns:42px 1fr 34px;align-items:center;gap:8px;margin:7px 0;font-size:.86rem}
+.ibar .t{height:12px;border-radius:6px;background:var(--soft);overflow:hidden}
+.ibar .t i{display:block;height:100%;border-radius:6px}
+.tl{list-style:none;padding:0;margin:10px 0 0}
+.tl li{display:grid;grid-template-columns:64px 1fr;gap:12px;padding:10px 0;border-top:1px solid var(--line)}
+.tl b.y{font-family:var(--serif);font-size:1.15rem;color:var(--azul)}
+
+/* legalidade */
+.risk{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:12px;margin:14px 0}
+.risk div{background:var(--verm-soft);border-radius:14px;padding:14px}
+.risk b{display:block;font-family:var(--serif);font-size:1.7rem;color:var(--verm);line-height:1.1}
+.risk span{font-size:.88rem;color:var(--ink)}
+blockquote{margin:16px 0;padding:14px 16px;border-left:4px solid var(--azul);background:var(--azul-soft);border-radius:10px;font-family:var(--serif);font-size:1.05rem}
+blockquote cite{display:block;font-family:var(--sans);font-style:normal;font-size:.82rem;color:var(--muted);margin-top:6px}
+
+/* comparação de leis */
+.laws{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:14px 0 4px}
+.laws div{border:1px solid var(--line);border-radius:14px;padding:14px}
+.laws h4{margin:0 0 6px;font-size:.95rem}
+.laws ul{margin:0;padding-left:1.1rem;font-size:.92rem}
+.laws .gone{border:2px dashed var(--verm);background:var(--verm-soft)}
+@media (max-width:560px){.laws{grid-template-columns:1fr}}
+
+/* investimento */
+.eqn .big{font-family:var(--serif);font-size:clamp(2.3rem,8vw,3.5rem);font-weight:700;line-height:1;color:var(--verde)}
+.stack{display:flex;height:56px;border-radius:12px;overflow:hidden;margin:18px 0 10px}
+.stack div{display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700;font-size:.85rem;min-width:0;overflow:hidden;white-space:nowrap}
+.s1{background:#3f5f95}.s2{background:#a3372b}.s3{background:#b9871f}
+.s4{background:repeating-linear-gradient(135deg,#1f7a4d 0 8px,#3d9a6a 8px 16px)}
+.keys{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:8px 18px;font-size:.9rem}
+.keys div{display:grid;grid-template-columns:14px 1fr auto;gap:8px;align-items:center}
+.keys i{width:14px;height:14px;border-radius:4px}
+.tw{overflow-x:auto;border:1px solid var(--line);border-radius:12px;margin:12px 0}
+table{border-collapse:collapse;width:100%;font-size:.9rem}
+th,td{padding:9px 12px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+th{background:var(--soft);font-weight:600;font-size:.84rem}
+td.r,th.r{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
+tr.tot td{font-weight:700;border-bottom:0}
+tr.neg td{color:var(--muted)}
+@media (max-width:480px){th,td{padding:8px 8px;font-size:.84rem}}
+.gauge{position:relative;height:28px;background:var(--soft);border-radius:8px;margin:14px 0 8px;border:1px solid var(--line)}
+.gauge .fill{position:absolute;inset:0 auto 0 0;background:#3f5f95;border-radius:8px 0 0 8px}
+.gauge .add{position:absolute;top:0;bottom:0;background:#1f7a4d}
+.gauge .mk{position:absolute;top:-5px;bottom:-5px;border-left:2px dashed var(--muted)}
+.gauge .mk.lim{border-left:2px solid var(--verm)}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+@media (max-width:760px){.two{grid-template-columns:1fr}}
+
+/* caminho */
+.steps{list-style:none;padding:0;margin:14px 0 0;counter-reset:s}
+.steps li{position:relative;padding:0 0 18px 44px;border-left:2px solid var(--line);margin-left:16px}
+.steps li:last-child{border-left-color:transparent}
+.steps li::before{counter-increment:s;content:counter(s);position:absolute;left:-17px;top:-2px;width:32px;height:32px;border-radius:50%;background:var(--azul);color:#fff;display:grid;place-items:center;font-weight:700;font-size:.85rem}
+.steps li.next::before{background:var(--card);color:var(--ouro-ink);border:2px solid var(--ouro)}
+.steps .d{font-size:.82rem;color:var(--muted);font-weight:700}
+.steps p{margin:.1rem 0 0;max-width:66ch}
+.close{text-align:center;padding:50px 0 30px}
+.close h2{font-size:clamp(1.6rem,4.5vw,2.3rem);max-width:26ch;margin:0 auto}
+.close p{color:var(--on-muted);max-width:56ch;margin:12px auto 0}
+footer{color:var(--on-muted);font-size:.8rem;padding:10px 0 40px;max-width:80ch}
+
+/* ===== organograma (estrutura do modelo IDG) ===== */
+#org{background:var(--card);color:var(--ink);border-radius:22px;overflow:hidden;margin-top:24px;box-shadow:0 18px 40px rgba(0,0,0,.25)}
+.org-band{background:var(--ob);color:#fff;padding:22px 32px 20px;display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap}
+.org-band h1{margin:0;font-family:var(--sans);font-size:26px;font-weight:800;letter-spacing:.01em;text-transform:uppercase}
+.org-band h2{margin:4px 0 0;font-family:var(--sans);font-size:19px;font-weight:700}
+.org-logo{display:flex;align-items:center;gap:8px}
+.org-logo .w{font-size:40px;font-weight:900;font-style:italic;letter-spacing:-.04em;line-height:1;color:var(--ouro)}
+.org-logo .s{font-size:9px;line-height:1.25;font-weight:700;letter-spacing:.04em;text-transform:uppercase}
+.org-sub{display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap;padding:18px 32px 4px}
+.org-sub .mes{font-size:22px;font-weight:800;letter-spacing:.01em}
+.org-tabs{display:inline-flex;gap:4px;border:1px solid var(--line);border-radius:12px;padding:4px;background:var(--soft);flex-wrap:wrap}
+.org-tabs button{border:0;background:none;padding:8px 14px;border-radius:9px;font:inherit;font-size:14px;color:var(--muted);cursor:pointer}
+.org-tabs button.on{background:var(--ob);color:#fff;font-weight:600}
+.org-tools{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+.obtn{border:1px solid var(--line);background:var(--card);color:var(--ink);border-radius:9px;padding:7px 14px;font:inherit;font-size:13px;cursor:pointer}
+.obtn:hover{border-color:var(--op);color:var(--op)}
+.org-legend{padding:8px 32px 0;font-size:12px;color:var(--muted);display:flex;gap:16px;flex-wrap:wrap;align-items:center}
+.org-legend span b{color:var(--op)}
+.org-legend i{display:inline-block;width:12px;height:12px;border-radius:50%;border:3px solid;margin-right:5px;vertical-align:-2px}
+.tree-wrap{overflow-x:auto;padding:14px 20px 50px}
+.tree{display:block;width:max-content;margin:0 auto}
+.tree ul{padding-top:30px;position:relative;display:flex;justify-content:center;margin:0;padding-left:0}
+.tree>ul{padding-top:0}
+.tree li{list-style:none;position:relative;padding:30px 6px 0;text-align:center;display:flex;flex-direction:column;align-items:center}
+.tree li::before,.tree li::after{content:'';position:absolute;top:0;right:50%;border-top:2px solid var(--ol);width:50%;height:30px}
+.tree li::after{right:auto;left:50%;border-left:2px solid var(--ol)}
+.tree li:only-child::before,.tree li:only-child::after{display:none}
+.tree li:only-child{padding-top:0}
+.tree li:first-child::before,.tree li:last-child::after{border:0 none}
+.tree li:last-child::before{border-right:2px solid var(--ol);border-radius:0 6px 0 0}
+.tree li:first-child::after{border-radius:6px 0 0 0}
+.tree ul ul::before{content:'';position:absolute;top:0;left:50%;border-left:2px solid var(--ol);height:30px}
+.tree>ul>li{padding-top:0}.tree>ul>li::before,.tree>ul>li::after{display:none}
+.onode{width:210px;display:flex;flex-direction:column;align-items:center;position:relative}
+.ocirc{width:108px;height:108px;border-radius:50%;border:5px solid var(--kc);background:var(--kcs);display:grid;place-items:center;font-size:30px;font-weight:800;color:var(--kc);box-shadow:0 4px 12px rgba(20,30,60,.15);cursor:pointer;transition:transform .15s;position:relative}
+.ocirc:hover{transform:scale(1.05)}
+.ocirc svg{width:64px;height:64px}
+.onum{position:absolute;bottom:-6px;right:-6px;background:var(--ob);color:#fff;font-size:12px;font-weight:700;border-radius:999px;padding:2px 8px;border:2px solid var(--card)}
+.otext{margin-top:10px;font-size:13px;line-height:1.35}
+.otext .c{font-weight:800;font-size:14px}
+.otext .n{color:var(--ink)}
+.otext .a{color:var(--muted);font-size:12px}
+.otext .e{color:var(--kc);font-weight:700;font-size:12.5px}
+.otext .flag{display:inline-block;margin-top:4px;font-size:10.5px;font-weight:600;color:#9a5b00;background:#fff4e0;border-radius:999px;padding:1px 8px}
+.otext .flag.gone{color:var(--verm);background:var(--verm-soft)}
+.omiss{margin-top:8px;font-size:12px;line-height:1.45;color:var(--ink);background:var(--soft);border-left:3px solid var(--kc);border-radius:6px;padding:7px 9px;text-align:left;width:100%}
+.omiss b{display:block;font-size:10.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--kc);margin-bottom:2px}
+.obtns{display:flex;gap:6px;flex-wrap:wrap;justify-content:center;margin-top:8px}
+.oatr-btn{display:inline-flex;align-items:center;gap:6px;border:1.5px solid var(--kc);color:var(--kc);background:var(--card);border-radius:999px;padding:3px 12px 3px 4px;font:inherit;font-size:12px;font-weight:600;cursor:pointer}
+.oatr-btn i{font-style:normal;width:18px;height:18px;border-radius:50%;background:var(--kc);color:#fff;display:grid;place-items:center;font-size:13px;line-height:1}
+.oatr{margin-top:8px;text-align:left;font-size:12px;line-height:1.45;color:var(--ink);background:var(--card);border:1px solid var(--line);border-radius:8px;padding:8px 10px;box-shadow:0 6px 16px rgba(20,30,60,.08);width:100%}
+.oatr .oi{position:relative;padding-left:12px;margin:0 0 5px}
+.oatr .oi::before{content:"";position:absolute;left:1px;top:7px;width:5px;height:5px;border-radius:50%;background:var(--kc)}
+.oatr .more{display:inline-block;margin-top:2px;color:var(--kc);font-weight:600;cursor:pointer;text-decoration:underline}
+.ostack{position:relative;padding-top:24px;width:256px}
+.ostack::before{content:'';position:absolute;left:50%;top:0;height:24px;border-left:2px solid var(--ol);margin-left:-1px}
+.olist{margin-left:10px;border-left:2px solid var(--ol);padding:10px 0 2px 0;display:flex;flex-direction:column;gap:10px;text-align:left}
+.omini{position:relative;margin-left:14px;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:8px 10px;box-shadow:0 2px 6px rgba(20,30,60,.06)}
+.omini::before{content:'';position:absolute;left:-16px;top:30px;width:14px;border-top:2px solid var(--ol)}
+.omini .mrow{display:flex;gap:10px;align-items:flex-start}
+.mc{width:50px;height:50px;border-radius:50%;border:3px solid var(--kc);overflow:hidden;flex:none;display:grid;place-items:center;background:var(--kcs);color:var(--kc);font-weight:800;font-size:16px;cursor:pointer;position:relative}
+.mc svg{width:32px;height:32px}
+.omini .mt{min-width:0;font-size:12px;line-height:1.3}
+.omini .mt .c{font-weight:800;font-size:12.5px}
+.omini .mt .n{color:var(--ink)}
+.omini .mt .a{color:var(--muted);font-size:11px}
+.mb{display:flex;gap:5px;flex-wrap:wrap;margin-top:5px}
+.mini-btn{border:1.5px solid var(--kc);color:var(--kc);background:var(--card);border-radius:999px;padding:1px 8px;font:inherit;font-size:11px;font-weight:600;cursor:pointer}
+.mx{margin-top:8px}.mx .omiss{margin-top:0}
+.mq{display:inline-block;background:var(--ob);color:#fff;border-radius:999px;font-size:10.5px;font-weight:700;padding:0 6px;margin-left:4px;vertical-align:1px}
+.ostaff{position:relative;width:452px;display:flex;flex-direction:column;align-items:flex-end;gap:14px;padding:22px 0 4px}
+.ostaff::before{content:'';position:absolute;left:50%;top:0;bottom:0;border-left:2px solid var(--ol);margin-left:-1px}
+.onode.st{width:186px;margin-right:4px}
+.onode.st::before{content:'';position:absolute;top:42px;left:-36px;width:90px;border-top:2px dashed var(--gab);opacity:.6}
+.onode.st .ocirc{width:84px;height:84px;font-size:22px;border-width:4px}
+.onode.st .ocirc svg{width:50px;height:50px}
+.otext .stg{display:inline-block;font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--gab);border:1px dashed var(--gab);border-radius:999px;padding:0 8px;margin-bottom:3px}
+.k-ped{--kc:var(--verde);--kcs:var(--verde-soft)}
+.k-adm{--kc:var(--azul);--kcs:var(--azul-soft)}
+.k-gab{--kc:var(--gab);--kcs:var(--gab-soft)}
+.k-top{--kc:var(--ob);--kcs:var(--azul-soft)}
+.k-gap{--kc:var(--verm);--kcs:var(--verm-soft)}
+.k-gap .ocirc,.k-gap.omini,.k-gap .mc{border-style:dashed}
+.det-wrap{padding:16px 32px 50px;display:grid;grid-template-columns:240px minmax(0,1fr);gap:24px;align-items:start}
+.det-idx{position:sticky;top:64px;border:1px solid var(--line);border-radius:12px;padding:10px;background:var(--soft);max-height:70vh;overflow:auto}
+.det-idx a{display:flex;gap:6px;padding:6px 8px;border-radius:7px;color:var(--ink);text-decoration:none;font-size:13px;cursor:pointer}
+.det-idx a:hover,.det-idx a.on{background:var(--azul-soft);color:var(--azul)}
+.det-idx a span{flex:none;min-width:24px;color:var(--muted);font-size:11.5px}
+.dcard{border:1px solid var(--line);border-radius:14px;margin-bottom:18px;overflow:hidden;scroll-margin-top:64px}
+.dcard.hl{box-shadow:0 0 0 3px var(--ouro)}
+.dhead{display:flex;gap:16px;align-items:center;padding:16px 20px;background:linear-gradient(90deg,#0d4677,#1d5e94);color:#fff}
+.dhead .dc{width:56px;height:56px;border-radius:50%;border:3px solid #fff;background:var(--kcs);color:var(--kc);display:grid;place-items:center;font-weight:800;font-size:18px;flex:none}
+.dhead .dc svg{width:34px;height:34px}
+.dhead h3{margin:0;font-family:var(--sans);font-size:18px}
+.dhead .dm{font-size:13px;color:#d4e2f1}
+.dbody{padding:16px 20px;display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.dbody .full{grid-column:1/-1}
+.dbody h4{margin:0 0 6px;font-size:11.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--kc)}
+.dbody p{margin:0;font-size:14px;line-height:1.55}
+.dbody ul{margin:0;padding-left:18px;font-size:13.5px;line-height:1.55}
+.dmiss{background:var(--soft);border-left:4px solid var(--kc);border-radius:8px;padding:10px 14px}
+.mhint{display:none;padding:4px 16px 0;font-size:12px;color:var(--muted)}
+@media (max-width:820px){.det-wrap{grid-template-columns:1fr;padding:12px 16px 40px}.det-idx{position:static;max-height:240px}.dbody{grid-template-columns:1fr}.org-band,.org-sub,.org-legend{padding-left:16px;padding-right:16px}.org-band h1{font-size:20px}.org-band h2{font-size:16px}.mhint{display:block}}
+</style>
+</head>
+<body>
+<header class="top">
+  <div class="in">
+    <a class="brand" href="#capa">SME Valença</a>
+    <nav aria-label="Seções">
+      <a href="#selo">Selo Ouro</a>
+      <a href="#ideb">IDEB</a>
+      <a href="#legalidade">Segurança jurídica</a>
+      <a href="#estrutura">Nova estrutura</a>
+      <a href="#investimento">Investimento</a>
+      <a href="#caminho">Próximos passos</a>
+    </nav>
+  </div>
+</header>
+
+<div class="wrap">
+
+<section class="hero" id="capa">
+  <div class="who">Secretaria Municipal de Educação de Valença · Proposta ao Prefeito</div>
+  <h1>Garantir o IDEB, conquistar o Selo Ouro e dar segurança jurídica à Educação de Valença</h1>
+  <div class="rule"></div>
+  <p class="sub">Valença avançou no IDEB de 2025 nos anos iniciais e nos anos finais. Para manter essa trajetória, chegar ao topo da alfabetização e proteger a gestão, a Secretaria precisa de uma equipe pedagógica reconhecida em lei.</p>
+  <div class="goals">
+    <a class="goal g-ouro" href="#selo">
+      <div class="gi" aria-hidden="true"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="9" r="6"/><path d="M8.5 14l-1.5 8 5-3 5 3-1.5-8"/></svg></div>
+      <h3>Conquistar o Selo Ouro</h3>
+      <p>Valença é prata no Selo Nacional Compromisso com a Alfabetização. Cerca de 10 pontos nos separam do ouro, e eles dependem de estrutura pedagógica formal.</p>
+      <span class="go">Ver objetivo</span>
+    </a>
+    <a class="goal g-verde" href="#ideb">
+      <div class="gi" aria-hidden="true"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 17l5-5 4 4 8-8"/><path d="M15 8h5v5"/></svg></div>
+      <h3>Garantir o IDEB</h3>
+      <p>Anos finais de 4,0 para 5,0 e anos iniciais de 4,9 para 5,7. O plano 2026–2027 com a FAA depende de equipe pedagógica em campo.</p>
+      <span class="go">Ver objetivo</span>
+    </a>
+    <a class="goal g-verm" href="#legalidade">
+      <div class="gi" aria-hidden="true"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/><path d="M9 12l2 2 4-4"/></svg></div>
+      <h3>Corrigir uma inconformidade</h3>
+      <p>Encerrar o pagamento de dupla regência a quem não está em sala de aula, antes que vire apontamento do Tribunal de Contas.</p>
+      <span class="go">Ver objetivo</span>
+    </a>
+  </div>
+  <div class="means"><p>O meio para os três objetivos é o mesmo: <b>formalizar a estrutura pedagógica da Secretaria</b>, com acréscimo de despesa pequeno e controlado.</p><a href="#estrutura">Ver estrutura</a></div>
+</section>
+
+<!-- SELO -->
+<section class="blk" id="selo">
+  <div class="eyebrow">Objetivo 1</div>
+  <h2 class="big">Conquistar o Selo Ouro da alfabetização</h2>
+  <p class="intro">O Selo Nacional Compromisso com a Alfabetização reconhece os municípios que mais avançam na alfabetização na idade certa. Ele dá visibilidade nacional e conta pontos para programas e recursos do MEC.</p>
+  <div class="sheet">
+    <div class="cols">
+      <div>
+        <h3>Onde Valença está</h3>
+        <p>Valença conquistou o <b>selo prata</b>. Nas regras deste ano, avançamos nos resultados de aprendizagem, mas perdemos cerca de <b>10 pontos</b> por não ter uma estrutura pedagógica formalizada na Secretaria.</p>
+        <p>A equipe existe e trabalha, mas não há ato oficial que a comprove. O mesmo acontece nos questionários federais do SIMEC: as políticas do MEC, como a de educação para as relações étnico-raciais, pedem decreto ou resolução que comprove a equipe responsável.</p>
+        <div class="callout">Uma Secretaria de Educação que, no papel, não tem equipe pedagógica perde pontos que já foram conquistados na sala de aula.</div>
+      </div>
+      <div>
+        <div class="medals">
+          <div class="medal"><div class="m m-prata">Prata</div><small>Hoje</small></div>
+          <div class="arrow" aria-hidden="true">→</div>
+          <div class="medal"><div class="m m-ouro">Ouro</div><small>Meta</small></div>
+        </div>
+        <div class="gap10">
+          <b>O que separa a prata do ouro</b>
+          <p style="margin:.3rem 0 0">Cerca de <b>10 pontos</b> ligados à existência de estrutura pedagógica formalizada na Secretaria.</p>
+        </div>
+        <ul class="dots" style="margin-top:14px">
+          <li>Comprovação das equipes em programas federais</li>
+          <li>Pontuação que influencia acesso a recursos</li>
+          <li>Reconhecimento nacional para o município</li>
+        </ul>
+      </div>
+    </div>
+    <p class="src">Fonte: avaliação interna da SME sobre os critérios do Selo e os questionários do SIMEC (2026).</p>
+  </div>
+</section>
+
+<!-- IDEB -->
+<section class="blk" id="ideb">
+  <div class="eyebrow">Objetivo 2</div>
+  <h2 class="big">Garantir o IDEB que Valença conquistou</h2>
+  <p class="intro">O avanço de 2025 veio de método: metas por escola, acompanhamento nas salas de aula e formação dos professores. Manter esse resultado exige que a equipe que faz esse trabalho continue existindo.</p>
+  <div class="sheet">
+    <div class="idebgrid">
+      <div class="ib"><h4>Anos finais</h4><div class="big num">5,0</div><div class="from">eram 4,0 em 2023 · 3º maior avanço do estado · 31º no RJ</div>
+        <div class="ibar"><span>2023</span><div class="t"><i style="width:40%;background:#9aa3b0"></i></div><b class="num">4,0</b></div>
+        <div class="ibar"><span>2025</span><div class="t"><i style="width:50%;background:var(--verde)"></i></div><b class="num">5,0</b></div></div>
+      <div class="ib"><h4>Anos iniciais</h4><div class="big num">5,7</div><div class="from">eram 4,9 em 2023 · +0,8 ponto</div>
+        <div class="ibar"><span>2023</span><div class="t"><i style="width:49%;background:#9aa3b0"></i></div><b class="num">4,9</b></div>
+        <div class="ibar"><span>2025</span><div class="t"><i style="width:57%;background:var(--verde)"></i></div><b class="num">5,7</b></div></div>
+    </div>
+    <h3 style="margin-top:22px">Como chegamos aqui e para onde vamos</h3>
+    <ul class="tl">
+      <li><b class="y">2025</b><div>Com a <b>consultoria Falconi</b>, a SME implantou gestão por metas e criou a equipe de multiplicadoras, que visita as escolas e leva as melhores práticas aos professores.</div></li>
+      <li><b class="y">2026–27</b><div>Com a <b>FAA</b>, o plano estruturante parte do diagnóstico do SAEX e prevê acompanhamento formativo das turmas do 2º ao 4º ano, qualificação dos coordenadores pedagógicos, recomposição da aprendizagem com o material do CNCA e tempo integral para o 4º e o 5º ano.</div></li>
+      <li><b class="y">O ponto</b><div>O próprio plano prevê <b>redimensionar e reestruturar o time interno da Secretaria</b> para sustentar o novo modelo pedagógico. As multiplicadoras seguem visitando as escolas, mas não têm cargo na estrutura.</div></li>
+    </ul>
+    <div class="callout">A nova estrutura cria a <b>Assessoria Pedagógica de Monitoramento e Resultados</b>, com três assessores para Educação Infantil, Tempo Integral e Escolas Regulares. É a equipe de campo que o plano da FAA exige.</div>
+    <p class="src">Fontes: quadro de divulgação IDEB 2025 – RJ (a conferir no portal do INEP); Plano de Ação FAA – Valença, ciclo 2026–2027.</p>
+  </div>
+</section>
+
+<!-- LEGALIDADE -->
+<section class="blk" id="legalidade">
+  <div class="eyebrow">Objetivo 3</div>
+  <h2 class="big">Corrigir uma inconformidade antes que ela vire problema</h2>
+  <p class="intro">Para remunerar melhor a equipe que trabalha na Secretaria, foi adotado o pagamento de dupla regência. A legislação municipal reserva a dupla regência a quem tem turma, com alunos matriculados. Quem trabalha na Secretaria não está em sala de aula.</p>
+  <div class="sheet">
+    <div class="risk">
+      <div><b class="num">13</b><span>servidores da SME recebendo dupla regência</span></div>
+      <div><b class="num">R$ 33,8 mil</b><span>por mês (cerca de R$ 2.600 cada)</span></div>
+      <div><b class="num">11</b><span>servidores em horas extras contínuas, R$ 13,0 mil por mês</span></div>
+    </div>
+    <p>As horas extras existem porque as funções gratificadas atuais pagam pouco, em média R$ 612,60. Em uma fiscalização do <b>TCE-RJ</b>, os valores de dupla regência podem ter de ser devolvidos pelos servidores, e a gestão pode ser responsabilizada.</p>
+    <p>Criar apenas um grupo de trabalho por resolução não resolve: a equipe continuaria recebendo por dupla regência. Formalizar a estrutura e corrigir a forma de pagamento precisam acontecer juntos.</p>
+    <blockquote>"A correção da prática ilegal de pagamento de dupla regência para funções administrativas também demonstra zelo com o princípio da legalidade e da moralidade."<cite>Procuradoria-Geral do Município, Parecer nº 75/2026, que opinou pela viabilidade jurídica da proposta</cite></blockquote>
+    <p class="src">Fontes: Memorando 081/SME, Anexos III e IV e Parecer PGM 75/2026 (processo SEI VLC-020506/000140/2026).</p>
+  </div>
+</section>
+
+<!-- ESTRUTURA -->
+<section class="blk" id="estrutura">
+  <div class="eyebrow">O meio</div>
+  <h2 class="big">Uma Secretaria com equipe pedagógica no papel</h2>
+  <p class="intro">Até 2025, a lei da estrutura da Prefeitura previa uma Divisão de Desenvolvimento do Ensino. A Lei Delegada 21/2025 não a manteve. A proposta devolve à Secretaria uma área pedagógica, agora organizada por etapa de ensino e com foco em resultados.</p>
+  <div class="sheet" style="padding-bottom:18px">
+    <div class="laws">
+      <div><h4>LC 175/2014, até julho de 2025</h4><ul><li>Divisão de Desenvolvimento do Ensino</li><li>Coordenações de Ensino Fundamental, Educação Infantil e Supervisão Escolar</li></ul></div>
+      <div class="gone"><h4>Lei Delegada 21/2025, hoje</h4><ul><li>Sem unidade pedagógica por etapa de ensino</li><li>Restam seções isoladas: Educação Especial, Orientação Técnica e Núcleos Distritais</li></ul></div>
+    </div>
+  </div>
+
+  <div id="org">
+    <div class="org-band">
+      <div><h1>Secretaria Municipal de Educação</h1><h2 id="orgSub">Estrutura proposta</h2></div>
+      <div class="org-logo"><span class="w">SME</span><span class="s">Prefeitura<br>Municipal<br>de Valença</span></div>
+    </div>
+    <div class="org-sub">
+      <span class="mes" id="orgMes">PROPOSTA · 48 CARGOS</span>
+      <div class="org-tabs" id="verTabs"><button data-v="hoje">Como é hoje</button><button data-v="prop">Como ficará</button></div>
+      <div class="org-tabs" id="modoTabs"><button data-ot="arvore">Organograma</button><button data-ot="detalhe">Detalhamento dos cargos</button></div>
+      <div class="org-tools"><button class="obtn" id="atrAll">Abrir todas as atribuições</button></div>
+    </div>
+    <div id="org-arvore">
+      <div class="org-legend"><span>Clique no círculo ou em <b>+ Atribuições</b> para ver as principais atribuições.</span>
+        <span><i style="border-color:var(--gab)"></i>Gabinete</span><span><i style="border-color:var(--verde)"></i>Pedagógico</span><span><i style="border-color:var(--azul)"></i>Gestão e apoio</span><span id="lgGap"><i style="border-color:var(--verm);border-style:dashed"></i>Unidade que deixou de existir</span></div>
+      <div class="mhint">↔ Arraste para o lado para ver todo o organograma.</div>
+      <div class="tree-wrap" id="treeWrap"><div class="tree" id="tree"></div></div>
+    </div>
+    <div id="org-detalhe" style="display:none">
+      <div class="det-wrap"><nav class="det-idx" id="detIdx" aria-label="Cargos"></nav><div id="detList"></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- INVESTIMENTO -->
+<section class="blk" id="investimento">
+  <div class="eyebrow">Investimento</div>
+  <h2 class="big">Um acréscimo pequeno, controlado e dentro da LRF</h2>
+  <p class="intro">A maior parte do custo da nova estrutura já é paga hoje, de forma dispersa e, em parte, em inconformidade. A reorganização troca esses pagamentos por cargos formais.</p>
+  <div class="sheet">
+    <div class="eqn">
+      <div class="mut">Acréscimo líquido por mês</div>
+      <div class="big num">R$ 50,9 mil</div>
+      <div class="mut">63% do custo da nova estrutura já é gasto hoje</div>
+    </div>
+    <div class="stack" role="img" aria-label="Custo mensal da nova estrutura, R$ 137,3 mil: R$ 39,6 mil de cargos ocupados hoje, R$ 33,8 mil de dupla regência, R$ 13,0 mil de horas extras e R$ 50,9 mil de acréscimo">
+      <div class="s1" style="flex:39642.69">39,6</div><div class="s2" style="flex:33800">33,8</div><div class="s3" style="flex:12976.76">13,0</div><div class="s4" style="flex:50892.41">50,9</div>
+    </div>
+    <div class="keys">
+      <div><i class="s1"></i><span>Cargos atuais ocupados</span><b class="num">R$ 39.642,69</b></div>
+      <div><i class="s2"></i><span>Duplas regências (13)</span><b class="num">R$ 33.800,00</b></div>
+      <div><i class="s3"></i><span>Horas extras (11)</span><b class="num">R$ 12.976,76</b></div>
+      <div><i class="s4"></i><span>Acréscimo real</span><b class="num">R$ 50.892,41</b></div>
+    </div>
+    <p class="mut" style="font-size:.88rem">Custo mensal da nova estrutura: <b class="num">R$ 137.311,86</b>. Na barra, valores em milhares de reais.</p>
+
+    <div class="two" style="margin-top:20px">
+      <div>
+        <h3>Em um ano</h3>
+        <div class="tw"><table>
+          <thead><tr><th>Componente</th><th class="r">Anual (R$)</th></tr></thead>
+          <tbody>
+            <tr><td>Nova estrutura (48 cargos)</td><td class="r">1.830.824,80</td></tr>
+            <tr class="neg"><td>(−) Cargos atuais ocupados</td><td class="r">528.569,20</td></tr>
+            <tr class="neg"><td>(−) Duplas regências</td><td class="r">405.600,00</td></tr>
+            <tr class="neg"><td>(−) Horas extras</td><td class="r">155.721,12</td></tr>
+            <tr class="tot"><td>Acréscimo líquido</td><td class="r">740.934,48</td></tr>
+          </tbody>
+        </table></div>
+        <p class="mut" style="font-size:.84rem">Cargos com 13º salário e 1/3 de férias. Duplas regências e horas extras por 12 meses, no cenário conservador.</p>
+      </div>
+      <div>
+        <h3>Lei de Responsabilidade Fiscal</h3>
+        <p class="mut" style="font-size:.9rem">Despesa com pessoal do Executivo sobre a receita corrente líquida ajustada.</p>
+        <div class="gauge" role="img" aria-label="De 35,03% para 35,21% da RCL; alerta 48,6%, prudencial 51,3%, máximo 54%">
+          <div class="fill" style="width:58.38%"></div><div class="add" style="left:58.38%;width:.5%"></div>
+          <div class="mk" style="left:81%"></div><div class="mk" style="left:85.5%"></div><div class="mk lim" style="left:90%"></div>
+        </div>
+        <p class="mut" style="font-size:.8rem;margin-top:0">Escala de 0% a 60%. Tracejado: alerta (48,6%) e prudencial (51,3%). Vermelho: máximo (54%).</p>
+        <div class="tw"><table><tbody>
+          <tr><td>Hoje</td><td class="r">35,03%</td></tr>
+          <tr><td>Com a nova estrutura</td><td class="r">35,21%</td></tr>
+          <tr><td>Folga até o limite de alerta</td><td class="r">R$ 55,6 mi</td></tr>
+          <tr><td>Peso no orçamento da SME 2026</td><td class="r">0,68%</td></tr>
+        </tbody></table></div>
+      </div>
+    </div>
+    <div class="callout">A Secretaria de Fazenda já se manifestou no processo: "o acréscimo pretendido na despesa com pessoal não comprometerá o limite estabelecido pela Lei Complementar nº 101/2000".</div>
+    <p class="src">Fontes: Anexos I a IV do processo SEI VLC-020506/000140/2026; RGF – Anexo 1, 3º quadrimestre de 2025; Demonstrativo da Despesa da SME 2026.</p>
+  </div>
+</section>
+
+<!-- CAMINHO -->
+<section class="blk" id="caminho">
+  <div class="eyebrow">Próximos passos</div>
+  <h2 class="big">O processo já está instruído</h2>
+  <p class="intro">Parecer jurídico favorável, dotação orçamentária certificada e manifestação da Fazenda já constam do processo. Falta a decisão para enviar o projeto de lei.</p>
+  <div class="sheet">
+    <ol class="steps">
+      <li><span class="d">Janeiro de 2026</span><p>Proposta da Secretaria de Educação ao Gabinete do Prefeito, com cargos e custos.</p></li>
+      <li><span class="d">Fevereiro de 2026</span><p>Parecer da Procuradoria-Geral pela viabilidade jurídica, certidão de dotação orçamentária e manifestação favorável da Fazenda quanto aos limites da LRF.</p></li>
+      <li><span class="d">Abril de 2026</span><p>Secretaria de Governo encaminha à SME para elaborar o projeto de lei.</p></li>
+      <li class="next"><span class="d">Decisão</span><p>Autorização do Prefeito para enviar o projeto de lei à Câmara Municipal.</p></li>
+      <li class="next"><span class="d">Em seguida</span><p>Aprovação, publicação, designação da equipe pedagógica e fim das duplas regências e horas extras compensatórias.</p></li>
+    </ol>
+  </div>
+</section>
+
+<section class="close">
+  <h2>Uma decisão que protege o resultado, abre caminho para o ouro e dá segurança à gestão</h2>
+  <p>A equipe já trabalha e já trouxe resultado. Formalizá-la custa pouco e evita perder o que foi conquistado.</p>
+</section>
+
+<footer>Elaborado pela Secretaria Municipal de Educação a partir do processo SEI VLC-020506/000140/2026, da Lei Delegada 21/2025, da LC 175/2014, do Relatório de Gestão Fiscal do 3º quadrimestre de 2025, dos demonstrativos de despesa da SME e do plano de ação FAA 2026–2027.</footer>
+</div>
+<script>
+(function(){
+const esc = s => String(s==null?"":s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;"}[c]));
+const ONE='<svg viewBox="0 0 64 64"><circle cx="32" cy="24" r="12" fill="currentColor"/><path d="M9 58c2-13 12-20 23-20s21 7 23 20z" fill="currentColor"/></svg>';
+const GRP='<svg viewBox="0 0 64 64"><circle cx="22" cy="24" r="9" fill="currentColor"/><circle cx="42" cy="24" r="9" fill="currentColor"/><path d="M6 54c1-10 8-16 16-16s15 6 16 16zM26 54c1-10 8-16 16-16s15 6 16 16z" fill="currentColor"/></svg>';
+const UNIT='<svg viewBox="0 0 64 64"><rect x="10" y="14" width="44" height="40" rx="5" fill="none" stroke="currentColor" stroke-width="5"/><path d="M10 26h44M24 14v-4h16v4" stroke="currentColor" stroke-width="5" fill="none"/></svg>';
+const SS="CC1-SS R$ 8.500,00 ou FC1-SS R$ 4.000,00", AS="CC2-SS R$ 4.000,00 ou FC2-SSE R$ 3.000,00", DD="CC6 R$ 2.176,38 ou FC2 R$ 1.531,51", DV="CC7 R$ 1.692,75 ou FC3 R$ 1.047,88", C8="CC8 R$ 1.518,00 ou FC4 R$ 612,60";
+
+/* ---------- ESTRUTURA DE HOJE (Lei Delegada 21/2025) ---------- */
+const HOJE=[
+ {id:"h-sec",p:null,k:"top",q:1,cargo:"Secretário Municipal de Educação",simb:"APM · R$ 13.000,00",eq:"Gabinete",
+  missao:"Elaborar e desenvolver a política educacional do município, conforme a LDB.",
+  atrib:["Elaborar planos, programas, projetos e atividades educacionais","Executar o ensino infantil, especial e fundamental","Estabelecer e supervisionar a política educacional","Editar normas que assegurem os princípios do ensino municipal"]},
+ {id:"h-ass",p:"h-sec",staff:1,k:"gab",q:2,cargo:"Assessor do Secretário",simb:"CC6 R$ 2.176,38 ou FC2 R$ 1.531,51",eq:"Gabinete",
+  missao:"Assessorar o Secretário e supervisionar os órgãos subordinados.",
+  atrib:["Assessorar o Secretário nos assuntos da pasta","Supervisionar e controlar os órgãos subordinados","Avaliar sistematicamente as atividades da Secretaria"]},
+ {id:"h-ae",p:"h-sec",staff:1,k:"gab",q:8,cargo:"Assistente Educacional",simb:"CC4 · R$ 3.385,46",eq:"Gabinete",
+  missao:"Assistir os órgãos da Secretaria em assuntos técnicos, administrativos e pedagógicos.",
+  atrib:["Analisar informações e dados de interesse dos departamentos","Coordenar ações dos setores e das unidades escolares","Atribuição genérica, sem área pedagógica definida"]},
+ {id:"h-exp",p:"h-sec",staff:1,k:"gab",q:2,cargo:"Chefe da Seção de Expediente",simb:C8,eq:"Gabinete",
+  missao:"Cuidar do expediente e da agenda da Secretaria.",
+  atrib:["Elaborar o expediente da Secretaria","Preparar agenda e pautas de reuniões","Planejar e dirigir as atividades de expediente"]},
+ {id:"h-dcc",p:"h-sec",k:"adm",q:1,cargo:"Diretor da Divisão de Contratos e Convênios",simb:DV,eq:"Gestão",
+  missao:"Preparar contratos, convênios e editais da Secretaria.",
+  atrib:["Elaborar minutas de contratos, convênios, editais e escrituras","Encaminhar os documentos à Procuradoria"]},
+ {id:"h-dad",p:"h-sec",k:"ped",q:1,cargo:"Diretor da Divisão de Acompanhamento Distrital",simb:DV,eq:"Acompanhamento",
+  missao:"Planejar e acompanhar as atividades da divisão e das escolas por distrito.",
+  atrib:["Orientar, coordenar e avaliar projetos da divisão","Executar planos e cumprir o cronograma de trabalho","Propor convênios na sua área de competência"]},
+ {id:"h-nuc",p:"h-dad",k:"ped",q:4,cargo:"Chefes das Seções dos Núcleos Distritais 1 a 4",simb:C8,eq:"Acompanhamento",
+  missao:"Supervisionar o funcionamento das escolas de cada distrito.",
+  atrib:["Executar projetos pedagógicos da sua área","Zelar pelo desempenho educacional da área rural","Indicar dificuldades e necessidades das escolas"]},
+ {id:"h-esp",p:"h-dad",k:"ped",q:1,cargo:"Chefe da Seção de Educação Especial",simb:C8,eq:"Acompanhamento",
+  missao:"Executar a proposta pedagógica da educação especial e inclusiva.",
+  atrib:["Executar o planejamento pedagógico da educação especial e inclusão"]},
+ {id:"h-ori",p:"h-dad",k:"ped",q:1,cargo:"Chefe da Seção de Orientação, Acompanhamento e Assessoramento Técnico",simb:C8,eq:"Acompanhamento",
+  missao:"Suporte técnico e tecnológico à Secretaria e estudos de supervisão escolar.",
+  atrib:["Fornecer suporte tecnológico a toda a Secretaria","Executar estudos técnicos de supervisão escolar","Orientar programas sob o aspecto técnico-pedagógico"]},
+ {id:"h-bib",p:"h-dad",k:"adm",q:1,cargo:"Coordenador da Biblioteca Municipal de Ensino e Cultura",simb:C8,eq:"Acompanhamento",
+  missao:"Organizar e dinamizar a Biblioteca Municipal.",
+  atrib:["Organizar o acervo","Promover atividades culturais e de leitura"]},
+ {id:"h-inf",p:"h-sec",k:"adm",q:1,cargo:"Diretor da Divisão de Infraestrutura",simb:DV,eq:"Gestão",
+  missao:"Coordenar pessoal, material, nutrição, informática, finanças e transporte.",
+  atrib:["Coordenar as seis coordenações administrativas","Acompanhar a execução das atividades de apoio às escolas"]},
+ {id:"h-pes",p:"h-inf",k:"adm",q:2,cargo:"Coordenação da Administração de Pessoal",simb:"Coordenador e 1 chefe de seção · "+C8,eq:"Gestão",
+  missao:"Administrar a vida funcional dos servidores da educação.",atrib:["Movimentação de pessoal, direitos e vantagens"]},
+ {id:"h-mat",p:"h-inf",k:"adm",q:2,cargo:"Coordenação de Material e Patrimônio",simb:"Coordenador e 1 chefe de seção · "+C8,eq:"Gestão",
+  missao:"Controlar material, almoxarifado e patrimônio.",atrib:["Almoxarifado e controle patrimonial"]},
+ {id:"h-nut",p:"h-inf",k:"adm",q:3,cargo:"Coordenação de Nutrição Escolar",simb:"Coordenador e 2 chefes de seção · "+C8,eq:"Gestão",
+  missao:"Garantir a alimentação escolar da rede.",atrib:["Controle e abastecimento","Planejamento e gestão da alimentação"]},
+ {id:"h-tic",p:"h-inf",k:"adm",q:2,cargo:"Coordenação de Informática",simb:"Coordenador e 1 chefe de seção · "+C8,eq:"Gestão",
+  missao:"Manter os sistemas e o apoio ao usuário.",atrib:["Apoio ao usuário e implementação de sistemas"]},
+ {id:"h-fin",p:"h-inf",k:"adm",q:2,cargo:"Coordenação Financeira",simb:"Coordenador e 1 chefe de seção · "+C8,eq:"Gestão",
+  missao:"Executar o orçamento e prestar contas.",atrib:["Execução financeira e prestação de contas"]},
+ {id:"h-tra",p:"h-inf",k:"adm",q:1,cargo:"Coordenação de Transporte Escolar",simb:C8,eq:"Gestão",
+  missao:"Organizar o transporte dos alunos.",atrib:["Rotas, frota e atendimento aos alunos"]},
+ {id:"h-gap",p:"h-sec",k:"gap",q:0,cargo:"Divisão de Desenvolvimento do Ensino",simb:"Prevista na LC 175/2014",eq:"Área pedagógica",gone:"Não mantida pela Lei Delegada 21/2025",
+  missao:"Era a área pedagógica da Secretaria, organizada por etapa de ensino.",
+  atrib:["Hoje não existe unidade responsável por alfabetização, educação infantil ou anos finais","A equipe pedagógica atua sem cargos próprios"]},
+ {id:"h-gef",p:"h-gap",k:"gap",q:0,cargo:"Coordenação de Ensino Fundamental",simb:"Sem previsão hoje",eq:"Área pedagógica",missao:"Coordenava o 1º e o 2º segmento, a educação especial e a EJA.",atrib:["Não existe na estrutura atual"]},
+ {id:"h-gei",p:"h-gap",k:"gap",q:0,cargo:"Coordenação de Educação Infantil",simb:"Sem previsão hoje",eq:"Área pedagógica",missao:"Coordenava creche (0 a 3 anos) e pré-escola (4 a 6 anos).",atrib:["Não existe na estrutura atual"]},
+ {id:"h-gsu",p:"h-gap",k:"gap",q:0,cargo:"Coordenação de Supervisão Escolar",simb:"Sem previsão hoje",eq:"Área pedagógica",missao:"Cuidava de legislação, orientação e acompanhamento técnico.",atrib:["Não existe na estrutura atual"]}
+];
+
+/* ---------- ESTRUTURA PROPOSTA (processo SEI VLC-020506/000140/2026) ---------- */
+const PROP=[
+ {id:"p-sec",p:null,k:"top",q:1,cargo:"Secretário Municipal de Educação",simb:"APM · R$ 13.000,00",eq:"Gabinete",
+  missao:"Dirigir a política educacional do município e responder pelos resultados da rede.",
+  atrib:["Definir metas e prioridades da rede","Aprovar planos, programas e projetos educacionais","Articular com MEC, Estado e parceiros como a FAA","Prestar contas ao Prefeito e aos conselhos"]},
+ {id:"p-sl",p:"p-sec",staff:1,stag:"Gabinete",k:"gab",q:1,cargo:"Supervisor de Legislação e Normas Escolares",simb:SS,eq:"Gabinete",
+  missao:"Garantir que a rede funcione dentro da legislação educacional.",
+  atrib:["Elaborar resoluções e normas da rede","Preparar os atos que comprovam as equipes nos programas federais","Acompanhar exigências do MEC, do Conselho Municipal e do TCE"]},
+ {id:"p-al",p:"p-sec",staff:1,stag:"Gabinete",k:"gab",q:1,cargo:"Assessor de Legislação, Orientação e Acompanhamento Técnico",simb:AS,eq:"Gabinete",
+  missao:"Orientar escolas e setores sobre normas e procedimentos.",
+  atrib:["Orientar as escolas sobre legislação e documentação escolar","Acompanhar a regularidade das unidades","Apoiar a Supervisão de Legislação"]},
+ {id:"p-ae",p:"p-sec",staff:1,stag:"Gabinete",k:"gab",q:3,cargo:"Assistente Educacional",simb:"CC2-SS R$ 4.000,00 ou FC2 R$ 1.531,51",eq:"Gabinete",
+  missao:"Assistir o Secretário em assuntos técnicos e pedagógicos.",
+  atrib:["Consolidar informações para decisão","Acompanhar demandas do gabinete","Apoiar a articulação com as supervisões"]},
+ {id:"p-ex",p:"p-sec",staff:1,stag:"Gabinete",k:"gab",q:3,cargo:"Chefe da Seção de Expediente",simb:C8,eq:"Gabinete",
+  missao:"Cuidar do expediente, da agenda e dos processos do gabinete.",
+  atrib:["Expediente e protocolo","Agenda e pautas de reuniões","Tramitação de processos no SEI"]},
+
+ {id:"p-se",p:"p-sec",k:"ped",q:1,cargo:"Supervisor de Ensino",simb:SS,eq:"Supervisão de Ensino · 19 cargos",
+  missao:"Coordenar toda a ação pedagógica da rede e responder pelas metas de aprendizagem.",
+  atrib:["Coordenar as sete assessorias pedagógicas","Conduzir o plano FAA 2026–2027","Acompanhar SAEX, SAEB e IDEB por escola","Responder pelos programas federais pedagógicos, como o CNCA e o Selo"]},
+ {id:"p-ei",p:"p-se",k:"ped",unit:1,q:2,cargo:"Assessoria Pedagógica da Educação Infantil",simb:"2 assessores",eq:"Supervisão de Ensino",
+  missao:"Garantir a qualidade pedagógica das creches e da pré-escola.",atrib:["Orientar as propostas pedagógicas da educação infantil","Acompanhar creches e pré-escolas","Preparar a transição para o 1º ano"]},
+ {id:"p-ei1",p:"p-ei",k:"ped",q:1,cargo:"Creches",simb:AS,eq:"Educação Infantil",missao:"Acompanhar o trabalho pedagógico das creches.",atrib:["Formação e acompanhamento das equipes de creche"]},
+ {id:"p-ei2",p:"p-ei",k:"ped",q:1,cargo:"Pré-escola",simb:AS,eq:"Educação Infantil",missao:"Acompanhar a pré-escola e a preparação para a alfabetização.",atrib:["Formação e acompanhamento das turmas de pré-escola"]},
+ {id:"p-ai",p:"p-se",k:"ped",unit:1,q:5,cargo:"Assessoria Pedagógica dos Anos Iniciais e EJA",simb:"5 assessores",eq:"Supervisão de Ensino",
+  missao:"Garantir a alfabetização na idade certa e a aprendizagem até o 5º ano.",atrib:["Coordenar a política de alfabetização (CNCA)","Acompanhar resultados do 1º ao 5º ano","Orientar a EJA do primeiro segmento"]},
+ {id:"p-ai1",p:"p-ai",k:"ped",q:2,cargo:"Alfabetização, 1º e 2º ano",simb:AS,eq:"Anos Iniciais",missao:"Garantir que toda criança esteja alfabetizada ao fim do 2º ano.",atrib:["Acompanhar as turmas de alfabetização","Formar professores alfabetizadores"]},
+ {id:"p-ai2",p:"p-ai",k:"ped",q:3,cargo:"3º, 4º e 5º ano",simb:AS,eq:"Anos Iniciais",missao:"Consolidar a aprendizagem até o 5º ano, foco do IDEB.",atrib:["Recomposição da aprendizagem","Preparação para as avaliações externas"]},
+ {id:"p-ti",p:"p-se",k:"ped",q:1,cargo:"Assessoria Pedagógica das Unidades de Tempo Integral",simb:AS,eq:"Supervisão de Ensino",
+  missao:"Qualificar o tempo integral, que será ampliado para o 4º e o 5º ano.",atrib:["Integrar os turnos e as rotinas pedagógicas","Apoiar a expansão do tempo integral em 2027","Acompanhar os resultados das unidades"]},
+ {id:"p-af",p:"p-se",k:"ped",unit:1,q:3,cargo:"Assessoria Pedagógica dos Anos Finais e EJA",simb:"3 assessores",eq:"Supervisão de Ensino",
+  missao:"Elevar a aprendizagem do 6º ao 9º ano por área de conhecimento.",atrib:["Orientar professores por área","Acompanhar resultados dos anos finais","Orientar a EJA do segundo segmento"]},
+ {id:"p-af1",p:"p-af",k:"ped",q:1,cargo:"Linguagens",simb:AS,eq:"Anos Finais",missao:"Língua Portuguesa e demais linguagens.",atrib:["Formação e acompanhamento da área"]},
+ {id:"p-af2",p:"p-af",k:"ped",q:1,cargo:"Matemática",simb:AS,eq:"Anos Finais",missao:"Ensino de Matemática.",atrib:["Formação e acompanhamento da área"]},
+ {id:"p-af3",p:"p-af",k:"ped",q:1,cargo:"Ciências Humanas e da Natureza",simb:AS,eq:"Anos Finais",missao:"História, Geografia e Ciências.",atrib:["Formação e acompanhamento da área"]},
+ {id:"p-ee",p:"p-se",k:"ped",unit:1,q:2,cargo:"Assessoria Pedagógica de Educação Especial e Projetos Especiais",simb:"2 assessores",eq:"Supervisão de Ensino",
+  missao:"Garantir inclusão e coordenar os projetos especiais da rede.",atrib:["Coordenar o AEE e a inclusão","Coordenar projetos como educação no campo e quilombola"]},
+ {id:"p-ee1",p:"p-ee",k:"ped",q:1,cargo:"AEE e inclusão",simb:AS,eq:"Educação Especial",missao:"Atendimento educacional especializado.",atrib:["Acompanhar salas de recursos e estudantes com deficiência"]},
+ {id:"p-ee2",p:"p-ee",k:"ped",q:1,cargo:"Projetos especiais",simb:AS,eq:"Educação Especial",missao:"Projetos e políticas transversais da rede.",atrib:["Acompanhar projetos e políticas federais transversais"]},
+ {id:"p-ar",p:"p-se",k:"ped",unit:1,q:2,cargo:"Assessoria Pedagógica de Articulação",simb:"2 assessores",eq:"Supervisão de Ensino",
+  missao:"Ligar a Secretaria aos coordenadores pedagógicos das escolas.",atrib:["Formar e acompanhar os coordenadores pedagógicos","Garantir que as orientações cheguem às salas de aula"]},
+ {id:"p-ar1",p:"p-ar",k:"ped",q:1,cargo:"Anos iniciais",simb:AS,eq:"Articulação",missao:"Articulação com as escolas de anos iniciais.",atrib:["Rotinas com os coordenadores pedagógicos"]},
+ {id:"p-ar2",p:"p-ar",k:"ped",q:1,cargo:"Anos finais",simb:AS,eq:"Articulação",missao:"Articulação com as escolas de anos finais.",atrib:["Rotinas com os coordenadores pedagógicos"]},
+ {id:"p-mr",p:"p-se",k:"ped",unit:1,q:3,cargo:"Assessoria Pedagógica de Monitoramento e Resultados",simb:"3 assessores · as multiplicadoras",eq:"Supervisão de Ensino",
+  missao:"Estar nas escolas, levar as melhores práticas aos professores e acompanhar as metas.",atrib:["Visitar escolas e observar aulas, com devolutiva ao professor","Acompanhar metas por turma e por escola","Executar o acompanhamento previsto no plano FAA"]},
+ {id:"p-mr1",p:"p-mr",k:"ped",q:1,cargo:"Educação infantil",simb:AS,eq:"Monitoramento",missao:"Acompanhamento em campo das creches e pré-escolas.",atrib:["Visitas, observação e devolutivas"]},
+ {id:"p-mr2",p:"p-mr",k:"ped",q:1,cargo:"Tempo integral",simb:AS,eq:"Monitoramento",missao:"Acompanhamento em campo das unidades de tempo integral.",atrib:["Visitas, observação e devolutivas"]},
+ {id:"p-mr3",p:"p-mr",k:"ped",q:1,cargo:"Escolas regulares",simb:AS,eq:"Monitoramento",missao:"Acompanhamento em campo das escolas regulares.",atrib:["Visitas, observação e devolutivas"]},
+
+ {id:"p-sg",p:"p-sec",k:"adm",q:1,cargo:"Supervisor de Gestão e Infraestrutura",simb:SS,eq:"Gestão e Infraestrutura · 20 cargos",
+  missao:"Garantir que as escolas tenham pessoas, recursos, alimentação, transporte e prédios em dia.",
+  atrib:["Coordenar as sete assessorias de gestão","Responder pelo orçamento e pela prestação de contas","Apoiar a Supervisão de Ensino com logística e dados"]},
+ {id:"p-rh",p:"p-sg",k:"adm",q:1,cargo:"Assessoria de Recursos Humanos",simb:AS,eq:"Gestão",missao:"Administrar a força de trabalho da educação.",atrib:["Frequência, folha e cadastro","Lotação e movimentação de pessoal"]},
+ {id:"p-rh1",p:"p-rh",k:"adm",q:1,cargo:"Departamento de Frequência",simb:DD,eq:"Recursos Humanos",missao:"Controlar a frequência dos servidores.",atrib:["Consolidar a frequência mensal"]},
+ {id:"p-rh2",p:"p-rh",k:"adm",q:1,cargo:"Departamento de Folha de Pagamento",simb:DD,eq:"Recursos Humanos",missao:"Preparar a folha da educação.",atrib:["Lançamentos e conferência da folha"]},
+ {id:"p-rh3",p:"p-rh",k:"adm",q:1,cargo:"Departamento de Documentação e Cadastro",simb:DD,eq:"Recursos Humanos",missao:"Manter a vida funcional documentada.",atrib:["Cadastro e documentação dos servidores"]},
+ {id:"p-cc",p:"p-sg",k:"adm",q:1,cargo:"Assessoria de Contratos e Convênios",simb:AS,eq:"Gestão",missao:"Conduzir contratos e convênios da Secretaria.",atrib:["Minutas de contratos e convênios","Acompanhamento da vigência e execução"]},
+ {id:"p-fi",p:"p-sg",k:"adm",q:1,cargo:"Assessoria Financeira",simb:AS,eq:"Gestão",missao:"Executar o orçamento da educação com controle.",atrib:["Execução orçamentária e financeira","Controle do FUNDEB e dos mínimos constitucionais"]},
+ {id:"p-fi1",p:"p-fi",k:"adm",q:1,cargo:"Departamento de Patrimônio, Almoxarifado e Material",simb:DD,eq:"Financeira",missao:"Controlar bens e estoques.",atrib:["Patrimônio, almoxarifado e material"]},
+ {id:"p-fi2",p:"p-fi",k:"adm",q:2,cargo:"Departamento Financeiro e Orçamentário",simb:DD,eq:"Financeira",missao:"Executar pagamentos e o orçamento.",atrib:["Empenho, liquidação e pagamento"]},
+ {id:"p-fi3",p:"p-fi",k:"adm",q:1,cargo:"Departamento de Prestação de Contas",simb:DD,eq:"Financeira",missao:"Prestar contas dos recursos da educação.",atrib:["Prestação de contas de programas e convênios"]},
+ {id:"p-pd",p:"p-sg",k:"adm",q:1,cargo:"Assessoria de Programas Federais e Municipais (PDDE/PEF)",simb:AS,eq:"Gestão",missao:"Captar e executar bem os recursos de programas.",atrib:["Gestão do PDDE e de programas federais","Apoio às escolas na execução dos recursos"]},
+ {id:"p-pd1",p:"p-pd",k:"adm",q:1,cargo:"Divisão Administrativa de Programas PDDE/PEF",simb:DV,eq:"Programas",missao:"Operar os programas nas escolas.",atrib:["Acompanhamento da execução e das prestações de contas"]},
+ {id:"p-ali",p:"p-sg",k:"adm",q:1,cargo:"Assessoria de Alimentação Escolar",simb:AS,eq:"Gestão",missao:"Garantir alimentação escolar de qualidade.",atrib:["Gestão do PNAE","Planejamento de cardápios e compras"]},
+ {id:"p-ali1",p:"p-ali",k:"adm",q:1,cargo:"Divisão Administrativa da Alimentação Escolar",simb:DV,eq:"Alimentação",missao:"Administrar o programa de alimentação.",atrib:["Contratos, entregas e controle"]},
+ {id:"p-ali2",p:"p-ali",k:"adm",q:1,cargo:"Divisão de Logística, Estoque e Abastecimento",simb:DV,eq:"Alimentação",missao:"Abastecer as escolas.",atrib:["Estoque e distribuição"]},
+ {id:"p-mo",p:"p-sg",k:"adm",q:1,cargo:"Assessoria de Manutenção e Obras Escolares",simb:AS,eq:"Gestão",missao:"Manter os prédios escolares em condições de uso.",atrib:["Manutenção preventiva e corretiva","Acompanhamento de obras e reformas"]},
+ {id:"p-tr",p:"p-sg",k:"adm",q:1,cargo:"Assessoria de Transporte Escolar",simb:AS,eq:"Gestão",missao:"Garantir que os alunos cheguem à escola.",atrib:["Gestão da frota e das rotas","Adequação ao tempo integral"]},
+ {id:"p-tr1",p:"p-tr",k:"adm",q:1,cargo:"Divisão Administrativa de Transporte Escolar",simb:DV,eq:"Transporte",missao:"Administrar contratos e frota.",atrib:["Contratos, motoristas e monitores"]},
+ {id:"p-tr2",p:"p-tr",k:"adm",q:1,cargo:"Divisão de Rotas Escolares, Abastecimento, Manutenção e Suporte Operacional",simb:DV,eq:"Transporte",missao:"Planejar rotas e manter a frota rodando.",atrib:["Rotas, abastecimento e manutenção"]}
+];
+
+const VERS={hoje:{data:HOJE,sub:"Como é hoje · Lei Delegada 21/2025",mes:"HOJE · 35 CARGOS PREVISTOS · 17 OCUPADOS"},
+            prop:{data:PROP,sub:"Como ficará · estrutura proposta",mes:"PROPOSTA · 48 CARGOS E FUNÇÕES"}};
+const ost={v:"prop",tab:"arvore",open:new Set()};
+let C=PROP;
+const kids=id=>C.filter(c=>c.p===id&&!c.staff), staffs=id=>C.filter(c=>c.p===id&&c.staff);
+const isLeaf=c=>!kids(c.id).length&&!staffs(c.id).length;
+const icon=c=>c.unit?UNIT:(c.q>1?GRP:ONE);
+
+function nodeBox(c){
+  const ab=ost.open.has(c.id);
+  const atr=ab?`<div class="oatr">${c.atrib.map(a=>`<div class="oi">${esc(a)}</div>`).join("")}<span class="more" data-det="${c.id}">Ver detalhamento</span></div>`:"";
+  return `<div class="onode k-${c.k}${c.staff?" st":""}" id="node-${c.id}">
+    <div class="ocirc" data-tog="${c.id}" role="button" tabindex="0" aria-label="${ab?"Ocultar":"Mostrar"} atribuições de ${esc(c.cargo)}">${icon(c)}${c.q?`<span class="onum">${c.q}</span>`:""}</div>
+    <div class="otext">${c.staff?`<div class="stg">${esc(c.stag||"Gabinete")}</div>`:""}<div class="c">${esc(c.cargo)}</div><div class="a">${esc(c.simb)}</div><div class="e">${esc(c.eq)}</div>${c.gone?`<div><span class="flag gone">${esc(c.gone)}</span></div>`:""}</div>
+    <div class="omiss"><b>Missão</b>${esc(c.missao)}</div>
+    <div class="obtns"><button class="oatr-btn" data-tog="${c.id}"><i>${ab?"−":"+"}</i>Atribuições (${c.atrib.length})</button></div>
+    ${atr}</div>`;
+}
+function nodeMini(c){
+  const ab=ost.open.has(c.id);
+  return `<div class="omini k-${c.k}" id="node-${c.id}">
+    <div class="mrow"><div class="mc" data-tog="${c.id}" role="button" tabindex="0" aria-label="Atribuições de ${esc(c.cargo)}">${icon(c)}</div>
+    <div class="mt"><div class="c">${esc(c.cargo)}${c.q?`<span class="mq">${c.q}</span>`:""}</div><div class="a">${esc(c.simb)}</div>
+    <div class="mb"><button class="mini-btn" data-tog="${c.id}">${ab?"−":"+"} Atribuições</button></div></div></div>
+    ${ab?`<div class="mx"><div class="omiss"><b>Missão</b>${esc(c.missao)}</div><div class="oatr">${c.atrib.map(a=>`<div class="oi">${esc(a)}</div>`).join("")}<span class="more" data-det="${c.id}">Ver detalhamento</span></div></div>`:""}
+  </div>`;
+}
+function nodeHTML(c){
+  const ch=kids(c.id), st=staffs(c.id);
+  const stack=ch.length>=2&&ch.every(isLeaf);
+  const below=!ch.length?"":stack?`<div class="ostack"><div class="olist">${ch.map(nodeMini).join("")}</div></div>`:`<ul>${ch.map(nodeHTML).join("")}</ul>`;
+  return `<li>${nodeBox(c)}${st.length?`<div class="ostaff">${st.map(nodeBox).join("")}</div>`:""}${below}</li>`;
+}
+const order=()=>{const out=[];const walk=id=>{staffs(id).forEach(x=>out.push(x));kids(id).forEach(c=>{out.push(c);walk(c.id)})};const r=C.find(c=>c.p===null);out.push(r);walk(r.id);return out};
+function renderTree(){document.getElementById("tree").innerHTML=`<ul>${nodeHTML(C.find(c=>c.p===null))}</ul>`}
+function renderDet(sel){
+  const L=order();
+  document.getElementById("detIdx").innerHTML=L.map(c=>`<a data-dgo="${c.id}" class="${c.id===sel?"on":""}"><span>${c.q||"–"}</span>${esc(c.cargo)}</a>`).join("");
+  document.getElementById("detList").innerHTML=L.map(c=>`<div class="dcard k-${c.k}${c.id===sel?" hl":""}" id="det-${c.id}">
+    <div class="dhead"><div class="dc">${icon(c)}</div><div><h3>${esc(c.cargo)}</h3><div class="dm">${esc(c.eq)} · ${c.q?c.q+(c.q>1?" cargos":" cargo"):"sem cargos"}</div></div></div>
+    <div class="dbody"><div class="full dmiss"><h4>Missão</h4><p>${esc(c.missao)}</p></div>
+      <div><h4>Principais atribuições</h4><ul>${c.atrib.map(a=>`<li>${esc(a)}</li>`).join("")}</ul></div>
+      <div><h4>Símbolo e valor</h4><p>${esc(c.simb)}</p>${c.gone?`<h4 style="margin-top:12px">Situação</h4><p>${esc(c.gone)}</p>`:""}</div></div></div>`).join("");
+  if(sel){const el=document.getElementById("det-"+sel); if(el) setTimeout(()=>el.scrollIntoView({block:"start"}),30)}
+}
+const tw=document.getElementById("treeWrap");
+function render(sel){
+  C=VERS[ost.v].data;
+  document.getElementById("orgSub").textContent=VERS[ost.v].sub;
+  document.getElementById("orgMes").textContent=VERS[ost.v].mes;
+  document.getElementById("lgGap").style.display=ost.v==="hoje"?"":"none";
+  document.querySelectorAll("#verTabs button").forEach(b=>b.classList.toggle("on",b.dataset.v===ost.v));
+  document.querySelectorAll("#modoTabs button").forEach(b=>b.classList.toggle("on",b.dataset.ot===ost.tab));
+  document.getElementById("org-arvore").style.display=ost.tab==="arvore"?"":"none";
+  document.getElementById("org-detalhe").style.display=ost.tab==="detalhe"?"":"none";
+  document.getElementById("atrAll").style.visibility=ost.tab==="arvore"?"visible":"hidden";
+  if(ost.tab==="arvore"){renderTree()} else renderDet(sel);
+}
+function center(){requestAnimationFrame(()=>{const r=document.querySelector("#tree > ul > li > .onode");if(!r)return;const off=r.offsetLeft+r.offsetWidth/2-tw.clientWidth/2;tw.scrollLeft=Math.max(0,off)})}
+document.querySelectorAll("#verTabs button").forEach(b=>b.onclick=()=>{ost.v=b.dataset.v;ost.open.clear();render();center()});
+document.querySelectorAll("#modoTabs button").forEach(b=>b.onclick=()=>{ost.tab=b.dataset.ot;render();if(ost.tab==="arvore")center()});
+document.getElementById("atrAll").onclick=()=>{if(C.every(c=>ost.open.has(c.id)))ost.open.clear();else C.forEach(c=>ost.open.add(c.id));const x=tw.scrollLeft;renderTree();tw.scrollLeft=x};
+document.getElementById("org").addEventListener("click",e=>{
+  const t=e.target.closest("[data-tog]"); if(t){const id=t.dataset.tog;ost.open.has(id)?ost.open.delete(id):ost.open.add(id);const x=tw.scrollLeft;renderTree();tw.scrollLeft=x;return}
+  const d=e.target.closest("[data-det]"); if(d){ost.tab="detalhe";render(d.dataset.det);return}
+  const g=e.target.closest("[data-dgo]"); if(g){render(g.dataset.dgo)}
+});
+document.getElementById("org").addEventListener("keydown",e=>{if((e.key==="Enter"||e.key===" ")&&e.target.matches(".ocirc,.mc")){e.preventDefault();e.target.click()}});
+render(); center();
+
+/* destaque da seção ativa na barra */
+const links=[...document.querySelectorAll(".top nav a")];
+const secs=links.map(a=>document.querySelector(a.getAttribute("href")));
+const navIn=document.querySelector(".top .in"), topBar=document.querySelector(".top");
+const reduce=matchMedia("(prefers-reduced-motion: reduce)").matches;
+function goTo(el){const y=el.getBoundingClientRect().top+window.pageYOffset-(topBar.offsetHeight+8);window.scrollTo({top:Math.max(0,y),behavior:reduce?"auto":"smooth"})}
+document.querySelectorAll('a[href^="#"]').forEach(a=>a.addEventListener("click",e=>{const el=document.querySelector(a.getAttribute("href"));if(!el)return;e.preventDefault();goTo(el)}));
+let last=-2;
+function spy(){let cur=-1;secs.forEach((s,i)=>{if(s&&s.getBoundingClientRect().top<topBar.offsetHeight+80)cur=i});if(cur===last)return;last=cur;links.forEach((a,i)=>a.classList.toggle("on",i===cur));if(cur>=0){const a=links[cur];const l=navIn.scrollLeft+(a.getBoundingClientRect().left-navIn.getBoundingClientRect().left)-(navIn.clientWidth-a.offsetWidth)/2;navIn.scrollLeft=Math.max(0,l)}}
+if(location.hash){const el=document.querySelector(location.hash.replace(/[^#\w-]/g,""));if(el)setTimeout(()=>goTo(el),60)}
+let tk=false;addEventListener("scroll",()=>{if(!tk){tk=true;requestAnimationFrame(()=>{spy();tk=false})}},{passive:true});
+spy();
+})();
+</script>
+</body>
+</html>
