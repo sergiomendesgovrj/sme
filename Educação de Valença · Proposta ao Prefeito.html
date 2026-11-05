@@ -161,6 +161,25 @@ tr.neg td{color:var(--muted)}
 .gauge .mk{position:absolute;top:-5px;bottom:-5px;border-left:2px dashed var(--muted)}
 .gauge .mk.lim{border-left:2px solid var(--verm)}
 .two{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+[hidden]{display:none!important}
+.explica{margin-top:20px;border:1px solid var(--line);border-radius:12px;background:var(--soft)}
+.explica summary{cursor:pointer;list-style:none;padding:13px 16px;font-weight:700;color:var(--ink);display:flex;align-items:center;gap:10px}
+.explica summary::-webkit-details-marker{display:none}
+.explica summary::before{content:"+";flex:0 0 26px;width:26px;height:26px;border-radius:50%;background:var(--ob);color:#fff;display:grid;place-items:center;font-size:1.1rem;line-height:1}
+.explica[open] summary::before{content:"−"}
+.explica .eb{padding:0 18px 16px;max-width:72ch}
+.explica h4{margin:16px 0 6px;font-size:1rem}
+.explica ul{padding-left:1.15rem;margin:.3rem 0}
+.explica li{margin:.3rem 0}
+.scen{display:flex;gap:6px;flex-wrap:wrap;margin-top:22px;background:rgba(255,255,255,.06);border:1px solid var(--on-line);border-radius:14px;padding:6px;width:fit-content;max-width:100%}
+.scen button{font:inherit;font-size:.95rem;font-weight:600;color:var(--on-muted);background:none;border:0;border-radius:10px;padding:10px 16px;cursor:pointer;text-align:left;line-height:1.25}
+.scen button small{display:block;font-weight:400;font-size:.8rem}
+.scen button[aria-pressed="true"]{background:var(--ouro);color:#1b1404}
+.cmpbars{margin:18px 0 6px}
+.cmpbars .row{display:grid;grid-template-columns:92px 1fr;gap:10px;align-items:center;margin:10px 0}
+.cmpbars .lb{font-size:.88rem;font-weight:600}
+.cmpbars .stack{margin:0;height:46px}
+.badge0{display:inline-block;background:var(--verde-soft);color:var(--verde);font-weight:700;font-size:.85rem;border-radius:999px;padding:3px 12px;margin-top:6px}
 @media (max-width:760px){.two{grid-template-columns:1fr}}
 
 /* caminho */
@@ -323,7 +342,7 @@ footer{color:var(--on-muted);font-size:.8rem;padding:10px 0 40px;max-width:80ch}
       <span class="go">Ver objetivo</span>
     </a>
   </div>
-  <div class="means"><p>O meio para os três objetivos é o mesmo: <b>formalizar a estrutura pedagógica da Secretaria</b>, com acréscimo de despesa pequeno e controlado.</p><a href="#estrutura">Ver estrutura</a></div>
+  <div class="means"><p>O meio para os três objetivos é o mesmo: <b>formalizar a estrutura pedagógica da Secretaria</b>, com dois cenários sem aumento de despesa.</p><a href="#estrutura">Ver estrutura</a></div>
 </section>
 
 <!-- SELO -->
@@ -441,9 +460,232 @@ footer{color:var(--on-muted);font-size:.8rem;padding:10px 0 40px;max-width:80ch}
 <!-- INVESTIMENTO -->
 <section class="blk" id="investimento">
   <div class="eyebrow">Investimento</div>
-  <h2 class="big">Um acréscimo pequeno, controlado e dentro da LRF</h2>
-  <p class="intro">A maior parte do custo da nova estrutura já é paga hoje, de forma dispersa e, em parte, em inconformidade. A reorganização troca esses pagamentos por cargos formais.</p>
-  <div class="sheet">
+  <h2 class="big">Três cenários, todos dentro da LRF</h2>
+  <p class="intro">Os Cenários A e B formalizam a equipe pedagógica sem aumentar a despesa, usando apenas o que já se paga hoje em cargos e duplas regências. O A reduz os valores e mantém mais cargos; o B mantém os valores e reduz cargos. O Cenário C implanta a estrutura completa proposta no processo, com acréscimo pequeno e controlado.</p>
+  <div class="scen" role="group" aria-label="Escolher cenário">
+    <button type="button" data-cen="A" aria-pressed="true">Cenário A<small>Sem aumento · valores menores</small></button>
+    <button type="button" data-cen="B" aria-pressed="false">Cenário B<small>Sem aumento · menos cargos</small></button>
+    <button type="button" data-cen="C" aria-pressed="false">Cenário C<small>Estrutura completa · com acréscimo</small></button>
+  </div>
+
+  <div class="sheet" id="cenA">
+    <div class="eqn">
+      <div class="mut">Variação da despesa por mês</div>
+      <div class="big num">R$ 0</div>
+      <span class="badge0">Sem aumento de despesa</span>
+      <p class="mut" style="margin-top:10px">A nova estrutura custa <b class="num">R$ 69.486,38</b> por mês, abaixo dos <b class="num">R$ 73.442,69</b> pagos hoje em cargos ocupados e duplas regências. Sobram <b class="num">R$ 3.956,31</b> por mês.</p>
+    </div>
+    <div class="cmpbars" role="img" aria-label="Hoje: R$ 39,6 mil em cargos e R$ 33,8 mil em dupla regência. Cenário A: R$ 13,0 mil Secretário, R$ 37,8 mil equipe pedagógica, R$ 18,7 mil gabinete e gestão">
+      <div class="row"><span class="lb">Hoje</span><div class="stack" style="width:100%"><div class="s1" style="flex:39642.69">39,6</div><div class="s2" style="flex:33800">33,8</div></div></div>
+      <div class="row"><span class="lb">Cenário A</span><div class="stack" style="width:94.6%"><div class="s1" style="flex:13000">13,0</div><div class="s4" style="flex:37800">37,8</div><div class="s3" style="flex:18686.38">18,7</div></div></div>
+    </div>
+    <div class="keys">
+      <div><i class="s1"></i><span>Hoje: cargos ocupados</span><b class="num">R$ 39,6 mil</b></div>
+      <div><i class="s1"></i><span>Cenário A: Secretário</span><b class="num">R$ 13,0 mil</b></div>
+      <div><i class="s2"></i><span>Duplas regências (13)</span><b class="num">R$ 33,8 mil</b></div>
+      <div><i class="s4"></i><span>Equipe pedagógica (14)</span><b class="num">R$ 37,8 mil</b></div>
+      <div><i class="s3"></i><span>Gabinete e gestão (17)</span><b class="num">R$ 18,7 mil</b></div>
+    </div>
+
+    <div class="two" style="margin-top:22px">
+      <div>
+        <h3>Composição do Cenário A</h3>
+        <div class="tw"><table>
+          <thead><tr><th>Cargo</th><th class="r">Qtd.</th><th class="r">Mensal (R$)</th></tr></thead>
+          <tbody>
+            <tr><td>Secretário Municipal (APM)</td><td class="r">1</td><td class="r">13.000,00</td></tr>
+            <tr><td>Supervisor de Ensino (FC1-SS)</td><td class="r">1</td><td class="r">4.000,00</td></tr>
+            <tr><td>Assessores pedagógicos (nova FC de R$ 2.600)</td><td class="r">13</td><td class="r">33.800,00</td></tr>
+            <tr><td>Supervisor de Gestão e Infraestrutura (FC1-SS)</td><td class="r">1</td><td class="r">4.000,00</td></tr>
+            <tr><td>Assessores de gestão (FC3)</td><td class="r">7</td><td class="r">7.335,16</td></tr>
+            <tr><td>Chefes de departamento e divisão (FC4)</td><td class="r">6</td><td class="r">3.675,60</td></tr>
+            <tr><td>Assistentes educacionais do gabinete (FC2)</td><td class="r">2</td><td class="r">3.063,02</td></tr>
+            <tr><td>Chefe da Seção de Expediente (FC4)</td><td class="r">1</td><td class="r">612,60</td></tr>
+            <tr class="tot"><td>Total</td><td class="r">32</td><td class="r">69.486,38</td></tr>
+          </tbody>
+        </table></div>
+      </div>
+      <div>
+        <h3>Onde ficam os 13 assessores pedagógicos</h3>
+        <div class="tw"><table>
+          <tbody>
+            <tr><td>Monitoramento e Resultados (multiplicadoras)</td><td class="r">3</td></tr>
+            <tr><td>Alfabetização, 1º e 2º ano</td><td class="r">2</td></tr>
+            <tr><td>3º, 4º e 5º ano</td><td class="r">2</td></tr>
+            <tr><td>Anos finais (Linguagens; Matemática e Ciências)</td><td class="r">2</td></tr>
+            <tr><td>Educação Infantil</td><td class="r">1</td></tr>
+            <tr><td>Tempo Integral</td><td class="r">1</td></tr>
+            <tr><td>Educação Especial e Projetos</td><td class="r">1</td></tr>
+            <tr><td>Articulação com as escolas</td><td class="r">1</td></tr>
+          </tbody>
+        </table></div>
+        <p class="mut" style="font-size:.86rem">Cada assessor recebe uma função gratificada de R$ 2.600, o mesmo valor médio que hoje é pago como dupla regência. A diferença é que passa a ser um pagamento previsto em lei.</p>
+      </div>
+    </div>
+
+    <div class="two" style="margin-top:10px">
+      <div>
+        <h3>Em um ano</h3>
+        <div class="tw"><table>
+          <tbody>
+            <tr><td>Hoje: cargos ocupados e duplas regências</td><td class="r">934.169,20</td></tr>
+            <tr><td>Cenário A</td><td class="r">926.485,07</td></tr>
+            <tr class="tot"><td>Diferença</td><td class="r">− 7.684,13</td></tr>
+          </tbody>
+        </table></div>
+        <p class="mut" style="font-size:.84rem">Cargos com 13º salário e 1/3 de férias. Duplas regências por 12 meses. Mesmo nesse cálculo conservador, o Cenário A custa menos do que hoje.</p>
+      </div>
+      <div>
+        <h3>O que muda em relação ao Cenário C</h3>
+        <ul class="dots">
+          <li>32 cargos em vez de 48, com a Supervisão de Ensino preservada como prioridade.</li>
+          <li>Gratificações menores na área de gestão e no gabinete, e sem a Supervisão de Legislação.</li>
+          <li>As horas extras de apoio continuam como hoje e não entram na conta.</li>
+          <li>A estrutura pedagógica fica formalizada, o que atende ao Selo e aos programas federais.</li>
+        </ul>
+      </div>
+    </div>
+    <div class="callout">O Cenário A precisa criar em lei uma função gratificada de assessoria pedagógica no valor de R$ 2.600. Todas as funções são ocupadas por servidores efetivos, sem novas contratações.</div>
+    <details class="explica"><summary>Entenda o Cenário A</summary><div class="eb">
+      <h4>Como foi montado</h4>
+      <p>O limite foi o que a Secretaria já paga hoje em cargos ocupados e duplas regências: R$ 73.442,69 por mês.</p>
+      <p>O Cenário A tem 32 cargos, com custo mensal de R$ 69.486,38, assim distribuídos:</p>
+      <ul>
+        <li>1 Secretário Municipal, R$ 13.000,00.</li>
+        <li>1 Supervisor de Ensino, na função gratificada FC1-SS, R$ 4.000,00.</li>
+        <li>13 assessores pedagógicos, cada um com uma nova função gratificada de R$ 2.600,00, total de R$ 33.800,00.</li>
+        <li>1 Supervisor de Gestão e Infraestrutura, na função gratificada FC1-SS, R$ 4.000,00.</li>
+        <li>7 assessores de gestão, na função gratificada FC3, total de R$ 7.335,16.</li>
+        <li>6 chefes de departamento e de divisão, na função gratificada FC4, total de R$ 3.675,60.</li>
+        <li>2 assistentes educacionais do gabinete, na função gratificada FC2, total de R$ 3.063,02.</li>
+        <li>1 Chefe da Seção de Expediente, na função gratificada FC4, R$ 612,60.</li>
+      </ul>
+      <p>O cenário fica R$ 3.956,31 por mês abaixo do gasto atual. No ano, contando 13º salário e 1/3 de férias, também fica abaixo: cerca de R$ 7,7 mil a menos.</p>
+      <p>O que sustenta a conta são os 13 assessores pedagógicos. Cada um recebe uma função gratificada de R$ 2.600,00, o mesmo valor médio pago hoje como dupla regência, mas agora previsto em lei.</p>
+      <h4>O que fica de fora em relação ao Cenário C</h4>
+      <ul>
+        <li>São 32 cargos em vez de 48.</li>
+        <li>As gratificações da gestão e do gabinete são menores. Juntas, as duas áreas custam R$ 18.686,38 por mês no Cenário A, contra R$ 66.311,86 no Cenário C: R$ 47.625,48 a menos por mês, cerca de 72%.</li>
+        <li>Na gestão, o custo cai de R$ 45.474,06 para R$ 15.010,76 (menos R$ 30.463,30 por mês), com 14 cargos em vez de 20. O Supervisor de Gestão mantém R$ 4.000,00. Cada assessor de gestão recebe R$ 1.047,88 em vez de R$ 3.000,00 (R$ 1.952,12 a menos). Os chefes de departamento e de divisão recebem R$ 612,60, contra R$ 2.176,38 dos diretores de departamento (R$ 1.563,78 a menos) e R$ 1.047,88 dos diretores de divisão (R$ 435,28 a menos) no Cenário C.</li>
+        <li>No gabinete, sem contar o Secretário, o custo cai de R$ 20.837,80 para R$ 3.675,62 (menos R$ 17.162,18 por mês), com 3 cargos em vez de 8. Cada assistente educacional recebe R$ 1.531,51 em vez de R$ 4.000,00 (R$ 2.468,49 a menos), e são 2 em vez de 3. A chefia de expediente mantém R$ 612,60, com 1 cargo em vez de 3.</li>
+        <li>Não há Supervisão de Legislação, que no Cenário C custa R$ 7.000,00 por mês.</li>
+        <li>As horas extras continuam como hoje, porque as gratificações de apoio seguem baixas.</li>
+      </ul>
+      <h4>Pontos para validar</h4>
+      <ul>
+        <li>Depende de criar em lei uma função gratificada nova, de R$ 2.600,00, para a assessoria pedagógica.</li>
+        <li>O organograma do site mostra a estrutura completa do Cenário C.</li>
+      </ul>
+    </div></details>
+    <p class="src">Fontes: Anexos II e III do processo SEI VLC-020506/000140/2026 (cargos ocupados e duplas regências); valores de FC da Lei Delegada 21/2025 e da proposta do processo.</p>
+  </div>
+
+  <div class="sheet" id="cenB" hidden>
+    <div class="eqn">
+      <div class="mut">Variação da despesa por mês</div>
+      <div class="big num">R$ 0</div>
+      <span class="badge0">Sem aumento de despesa</span>
+      <p class="mut" style="margin-top:10px">A estrutura custa <b class="num">R$ 69.836,86</b> por mês, abaixo dos <b class="num">R$ 73.442,69</b> pagos hoje em cargos ocupados e duplas regências. Todos os cargos mantêm os valores da estrutura completa; só a quantidade diminui.</p>
+    </div>
+    <div class="cmpbars" role="img" aria-label="Hoje: R$ 39,6 mil em cargos e R$ 33,8 mil em dupla regência. Cenário B: R$ 13,0 mil Secretário, R$ 43,0 mil equipe pedagógica, R$ 13,8 mil gabinete e gestão">
+      <div class="row"><span class="lb">Hoje</span><div class="stack" style="width:100%"><div class="s1" style="flex:39642.69">39,6</div><div class="s2" style="flex:33800">33,8</div></div></div>
+      <div class="row"><span class="lb">Cenário B</span><div class="stack" style="width:95.1%"><div class="s1" style="flex:13000">13,0</div><div class="s4" style="flex:43000">43,0</div><div class="s3" style="flex:13836.86">13,8</div></div></div>
+    </div>
+    <div class="keys">
+      <div><i class="s1"></i><span>Hoje: cargos ocupados</span><b class="num">R$ 39,6 mil</b></div>
+      <div><i class="s1"></i><span>Cenário B: Secretário</span><b class="num">R$ 13,0 mil</b></div>
+      <div><i class="s2"></i><span>Duplas regências (13)</span><b class="num">R$ 33,8 mil</b></div>
+      <div><i class="s4"></i><span>Equipe pedagógica (14)</span><b class="num">R$ 43,0 mil</b></div>
+      <div><i class="s3"></i><span>Gabinete e gestão (6)</span><b class="num">R$ 13,8 mil</b></div>
+    </div>
+
+    <div class="two" style="margin-top:22px">
+      <div>
+        <h3>Composição do Cenário B</h3>
+        <div class="tw"><table>
+          <thead><tr><th>Cargo</th><th class="r">Qtd.</th><th class="r">Mensal (R$)</th></tr></thead>
+          <tbody>
+            <tr><td>Secretário Municipal (APM)</td><td class="r">1</td><td class="r">13.000,00</td></tr>
+            <tr><td>Supervisor de Ensino</td><td class="r">1</td><td class="r">4.000,00</td></tr>
+            <tr><td>Assessores pedagógicos (R$ 3.000)</td><td class="r">13</td><td class="r">39.000,00</td></tr>
+            <tr><td>Supervisor de Gestão e Infraestrutura</td><td class="r">1</td><td class="r">4.000,00</td></tr>
+            <tr><td>Assessores de gestão (R$ 3.000)</td><td class="r">2</td><td class="r">6.000,00</td></tr>
+            <tr><td>Diretor de departamento</td><td class="r">1</td><td class="r">2.176,38</td></tr>
+            <tr><td>Diretor de divisão</td><td class="r">1</td><td class="r">1.047,88</td></tr>
+            <tr><td>Chefe da Seção de Expediente</td><td class="r">1</td><td class="r">612,60</td></tr>
+            <tr class="tot"><td>Total</td><td class="r">21</td><td class="r">69.836,86</td></tr>
+          </tbody>
+        </table></div>
+      </div>
+      <div>
+        <h3>Em um ano</h3>
+        <div class="tw"><table>
+          <tbody>
+            <tr><td>Hoje: cargos ocupados e duplas regências</td><td class="r">934.169,20</td></tr>
+            <tr><td>Cenário B</td><td class="r">931.158,13</td></tr>
+            <tr class="tot"><td>Diferença</td><td class="r">− 3.011,07</td></tr>
+          </tbody>
+        </table></div>
+        <p class="mut" style="font-size:.84rem">Cargos com 13º salário e 1/3 de férias. Duplas regências por 12 meses.</p>
+        <h3 style="margin-top:16px">O que muda em relação ao Cenário C</h3>
+        <ul class="dots">
+          <li>21 cargos em vez de 48, com os mesmos valores.</li>
+          <li>A equipe pedagógica fica com 13 assessores; a gestão e o gabinete ficam muito enxutos.</li>
+        </ul>
+      </div>
+    </div>
+    <div class="callout">O Cenário B paga melhor que o A, mas cobre menos áreas. Alimentação, transporte, obras, programas federais e contratos ficariam sem chefia formalizada.</div>
+
+    <details class="explica"><summary>Entenda o Cenário B</summary><div class="eb">
+      <h4>Como foi montado</h4>
+      <p>O Cenário B mantém os mesmos valores da estrutura completa e reduz só a quantidade de cargos. O limite é o mesmo do Cenário A: o que a Secretaria já paga hoje em cargos ocupados e duplas regências, R$ 73.442,69 por mês. Para o resultado também ficar dentro do limite no ano, contando 13º salário e 1/3 de férias, o teto mensal precisa ser de R$ 70.062,69.</p>
+      <p>São 21 cargos, com custo mensal de R$ 69.836,86, todos com os valores da estrutura completa:</p>
+      <ul>
+        <li>1 Secretário Municipal, R$ 13.000,00.</li>
+        <li>1 Supervisor de Ensino, R$ 4.000,00.</li>
+        <li>13 assessores pedagógicos, a R$ 3.000,00 cada, total de R$ 39.000,00.</li>
+        <li>1 Supervisor de Gestão e Infraestrutura, R$ 4.000,00.</li>
+        <li>2 assessores de gestão, a R$ 3.000,00 cada, total de R$ 6.000,00.</li>
+        <li>1 diretor de departamento, R$ 2.176,38.</li>
+        <li>1 diretor de divisão, R$ 1.047,88.</li>
+        <li>1 Chefe da Seção de Expediente, R$ 612,60.</li>
+      </ul>
+      <p>O cenário fica R$ 3.605,83 por mês abaixo do gasto atual. No ano, contando 13º salário e 1/3 de férias, também fica abaixo: cerca de R$ 3 mil a menos.</p>
+      <p>A equipe pedagógica fica praticamente igual à do Cenário A: os mesmos 13 assessores, agora com R$ 3.000,00 em vez de R$ 2.600,00. A distribuição sugerida é a mesma:</p>
+      <ul>
+        <li>3 na Assessoria de Monitoramento e Resultados (as multiplicadoras).</li>
+        <li>2 na alfabetização, do 1º e 2º ano.</li>
+        <li>2 no 3º, 4º e 5º ano.</li>
+        <li>2 nos anos finais.</li>
+        <li>1 na educação infantil.</li>
+        <li>1 no tempo integral.</li>
+        <li>1 na educação especial e projetos.</li>
+        <li>1 na articulação com as escolas.</li>
+      </ul>
+      <h4>Comparação com o Cenário C</h4>
+      <ul>
+        <li>Pedagógico: 14 cargos em vez de 19, ou seja, 5 assessores a menos.</li>
+        <li>Gestão: 6 cargos em vez de 20. Das 7 assessorias, ficam 2; por exemplo, Financeira e Recursos Humanos, que concentram o maior risco de prestação de contas. Dos 7 departamentos, fica 1, e das 5 divisões, fica 1.</li>
+        <li>Gabinete: fica só 1 chefe de expediente. Saem a Supervisão de Legislação, a assessoria de legislação e os 3 assistentes educacionais.</li>
+      </ul>
+      <h4>Comparação com o Cenário A</h4>
+      <ul>
+        <li>O Cenário A tem 32 cargos, e o B tem 21. São 11 funções a menos, quase todas na gestão e no gabinete.</li>
+        <li>Em troca, ninguém recebe menos do que na estrutura completa: assessores com R$ 3.000,00, diretores de departamento com R$ 2.176,38 e assim por diante.</li>
+        <li>Os dois custam praticamente o mesmo: R$ 69.486,38 no A e R$ 69.836,86 no B.</li>
+      </ul>
+      <h4>Riscos</h4>
+      <ul>
+        <li>A gestão fica muito enxuta. Alimentação escolar, transporte, obras, programas federais e contratos ficariam sem chefia formalizada e continuariam funcionando como hoje, inclusive com horas extras.</li>
+        <li>O Secretário fica sem assistente educacional no gabinete.</li>
+        <li>Algumas pessoas que hoje ocupam cargos na estrutura atual podem ficar sem função, o que pede uma conversa prévia com a equipe.</li>
+      </ul>
+      <p>Na prática, o Cenário A distribui o mesmo dinheiro entre mais gente, com valores menores. O Cenário B paga melhor, mas cobre menos áreas. Um meio-termo possível é usar o B na área pedagógica e os valores do A na gestão.</p>
+    </div></details>
+    <p class="src">Fontes: Anexos II e III do processo SEI VLC-020506/000140/2026; valores da estrutura proposta no processo.</p>
+  </div>
+
+  <div class="sheet" id="cenC" hidden>
     <div class="eqn">
       <div class="mut">Acréscimo líquido por mês</div>
       <div class="big num">R$ 50,9 mil</div>
@@ -492,6 +734,31 @@ footer{color:var(--on-muted);font-size:.8rem;padding:10px 0 40px;max-width:80ch}
       </div>
     </div>
     <div class="callout">A Secretaria de Fazenda já se manifestou no processo: "o acréscimo pretendido na despesa com pessoal não comprometerá o limite estabelecido pela Lei Complementar nº 101/2000".</div>
+    <details class="explica"><summary>Entenda o Cenário C</summary><div class="eb">
+      <h4>Como funciona</h4>
+      <p>O Cenário C implanta a estrutura completa proposta no processo SEI VLC-020506/000140/2026: 48 cargos, com custo mensal de R$ 137.311,86.</p>
+      <ul>
+        <li>Gabinete: 9 cargos, com o Secretário, R$ 33.837,80 por mês.</li>
+        <li>Supervisão de Ensino: 19 cargos, R$ 58.000,00 por mês.</li>
+        <li>Supervisão de Gestão e Infraestrutura: 20 cargos, R$ 45.474,06 por mês.</li>
+      </ul>
+      <p>Desse total, R$ 86.419,45 já são gastos hoje e deixam de existir: R$ 39.642,69 em cargos ocupados, R$ 33.800,00 em duplas regências e R$ 12.976,76 em horas extras. O acréscimo líquido é de R$ 50.892,41 por mês, ou 37% do custo da nova estrutura. No ano, com 13º salário e 1/3 de férias, são R$ 740.934,48.</p>
+      <h4>Efeito na Lei de Responsabilidade Fiscal</h4>
+      <ul>
+        <li>A despesa com pessoal do Executivo passa de 35,03% para 35,21% da receita corrente líquida.</li>
+        <li>O limite de alerta é 48,6%. A folga até ele é de R$ 55,6 milhões, e o acréscimo usa cerca de 1,3% dessa folga.</li>
+        <li>O acréscimo equivale a 0,68% do orçamento inicial da Secretaria em 2026.</li>
+        <li>A Secretaria de Fazenda já se manifestou no processo: o acréscimo não compromete o limite da Lei de Responsabilidade Fiscal.</li>
+      </ul>
+      <h4>O que só o Cenário C entrega</h4>
+      <ul>
+        <li>Equipe pedagógica completa, com 18 assessores organizados por etapa de ensino.</li>
+        <li>Supervisão de Legislação e Normas Escolares no gabinete.</li>
+        <li>Chefia formalizada em todas as áreas de gestão: recursos humanos, contratos, finanças, programas federais, alimentação, obras e transporte.</li>
+        <li>Fim das horas extras usadas como complemento de remuneração.</li>
+      </ul>
+      <p>Comparado à estrutura atual completa, que a lei já autoriza preencher a qualquer momento (35 cargos, R$ 67.193,33 por mês), a diferença cai para R$ 23.341,77 por mês.</p>
+    </div></details>
     <p class="src">Fontes: Anexos I a IV do processo SEI VLC-020506/000140/2026; RGF – Anexo 1, 3º quadrimestre de 2025; Demonstrativo da Despesa da SME 2026.</p>
   </div>
 </section>
@@ -737,6 +1004,7 @@ function spy(){let cur=-1;secs.forEach((s,i)=>{if(s&&s.getBoundingClientRect().t
 if(location.hash){const el=document.querySelector(location.hash.replace(/[^#\w-]/g,""));if(el)setTimeout(()=>goTo(el),60)}
 let tk=false;addEventListener("scroll",()=>{if(!tk){tk=true;requestAnimationFrame(()=>{spy();tk=false})}},{passive:true});
 spy();
+document.querySelectorAll(".scen button").forEach(b=>b.addEventListener("click",()=>{document.querySelectorAll(".scen button").forEach(x=>x.setAttribute("aria-pressed",x===b?"true":"false"));["A","B","C"].forEach(k=>{document.getElementById("cen"+k).hidden=b.dataset.cen!==k});}));
 })();
 </script>
 </body>
